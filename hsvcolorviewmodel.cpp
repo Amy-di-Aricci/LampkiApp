@@ -1,40 +1,40 @@
-#include "colorviewmodel.h"
+#include "hsvcolorviewmodel.h"
 
-ColorViewModel::ColorViewModel(QObject *parent) : QObject(parent)
+HSVColorViewModel::HSVColorViewModel(QObject *parent) : QObject(parent)
 {
-    _colorModel = ColorModel();
+    _colorModel = HSVColorModel();
     qDebug("Konstruktor");
 }
 
-int ColorViewModel::Hue()
+int HSVColorViewModel::Hue()
 {
     return _colorModel.GetHue();
 }
 
-int ColorViewModel::Saturation()
+int HSVColorViewModel::Saturation()
 {
     return _colorModel.GetSaturation();
 }
 
-int ColorViewModel::Value()
+int HSVColorViewModel::Value()
 {
     return _colorModel.GetValue();
 }
 
-void ColorViewModel::setHue(int h)
+void HSVColorViewModel::setHue(int h)
 {
     _colorModel.SetHue(h);
     qDebug("Dzialam w srodku");
     emit HueChanged(h);
 }
 
-void ColorViewModel::setSaturation(int s)
+void HSVColorViewModel::setSaturation(int s)
 {
     _colorModel.SetSaturation(s);
     emit SaturationChanged(s);
 }
 
-void ColorViewModel::setValue(int v)
+void HSVColorViewModel::setValue(int v)
 {
     _colorModel.SetValue(v);
     emit ValueChanged(v);

@@ -1,21 +1,21 @@
-#ifndef COLORVIEWMODEL_H
-#define COLORVIEWMODEL_H
+#ifndef HSVCOLORVIEWMODEL_H
+#define HSVCOLORVIEWMODEL_H
 
 #include <QObject>
-#include "colormodel.h"
+#include "hsvcolormodel.h"
 
-class ColorViewModel : public QObject
+class HSVColorViewModel : public QObject
 {
     Q_OBJECT
 
 private:
-    ColorModel _colorModel;
+    HSVColorModel _colorModel;
     Q_PROPERTY(int Hue READ Hue WRITE setHue NOTIFY HueChanged)
     Q_PROPERTY(int Saturation READ Saturation WRITE setSaturation NOTIFY SaturationChanged)
     Q_PROPERTY(int Value READ Value WRITE setValue NOTIFY ValueChanged)
 
 public:
-    explicit ColorViewModel(QObject *parent = nullptr);
+    explicit HSVColorViewModel(QObject *parent = nullptr);
     int Hue();
     int Saturation();
     int Value();

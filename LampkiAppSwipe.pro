@@ -16,7 +16,9 @@ SOURCES += main.cpp \
     test.cpp \
     testviewmodel.cpp \
     colormodel.cpp \
-    colorviewmodel.cpp
+    hsvcolormodel.cpp \
+    rgbcolormodel.cpp \
+    hsvcolorviewmodel.cpp
 
 RESOURCES += qml.qrc
 
@@ -35,4 +37,7 @@ HEADERS += \
     test.h \
     testviewmodel.h \
     colormodel.h \
-    colorviewmodel.h
+    acolormodel.h \
+    hsvcolormodel.h \
+    rgbcolormodel.h \
+    hsvcolorviewmodel.h

@@ -1,7 +1,7 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.2
 import LampkiApp.TestViewModel 1.0
-import LampkiApp.ColorViewModel 1.0
+import LampkiApp.HSVColorViewModel 1.0
 
 ApplicationWindow {
     visible: true
@@ -15,8 +15,8 @@ ApplicationWindow {
         id: testViewModel
     }
 
-    ColorViewModel {
-        id: colorViewModel
+    HSVColorViewModel {
+        id: hsvColorViewModel
     }
 
     SwipeView {
@@ -61,12 +61,12 @@ ApplicationWindow {
 
         ColorPickerForm{
             id: colorPickerForm
-            Binding {target: colorViewModel; property: "Hue"; value: colorPickerForm.hueSlider.value}
-            Binding {target: colorViewModel; property: "Saturation"; value: colorPickerForm.saturationSlider.value}
-            Binding {target: colorViewModel; property: "Value"; value: colorPickerForm.valueSlider.value}
+            Binding {target: hsvColorViewModel; property: "Hue"; value: colorPickerForm.hueSlider.value}
+            Binding {target: hsvColorViewModel; property: "Saturation"; value: colorPickerForm.saturationSlider.value}
+            Binding {target: hsvColorViewModel; property: "Value"; value: colorPickerForm.valueSlider.value}
             //rect: Qt.hsva(colorViewModel.Hue/360, colorViewModel.Saturation/100, colorViewModel.Value/100, 1)
-            rect.color: Qt.hsva(colorViewModel.Hue/360, colorViewModel.Saturation/100, colorViewModel.Value/100, 1)
-            hexCodeLabel.text: colorViewModel.Hue
+            rect.color: Qt.hsva(hsvColorViewModel.Hue/360, hsvColorViewModel.Saturation/100, hsvColorViewModel.Value/100, 1)
+            hexCodeLabel.text: hsvColorViewModel.Hue
         }
 
     }
