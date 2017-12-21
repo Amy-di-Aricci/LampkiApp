@@ -7,5 +7,8 @@ ColorPickerForm {
 
     background: hsva(hsvColorViewModel.Hue/360, hsvColorViewModel.Saturation/100, hsvColorViewModel.Value/100, 1)
 
-    hexCodeLabel.text: hsvColorViewModel.Hue
+    hueLabel.text: hsvColorViewModel.Hue
+    saturationLabel.text: hsvColorViewModel.Saturation
+    valueLabel.text: hsvColorViewModel.Value
+
 }

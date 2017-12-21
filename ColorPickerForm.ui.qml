@@ -4,16 +4,18 @@ import QtQuick.Controls.Material 2.0
 
 Page {
     contentWidth: -2
-    property alias hexCodeLabel: hexCodeLabel
     property alias hueSlider: hueSlider
     property alias saturationSlider: saturationSlider
     property alias valueSlider: valueSlider
-    property alias rect: rect
+    property alias rectangle: rectangle
+    property alias hueLabel: hueLabel
+    property alias saturationLabel: saturationLabel
+    property alias valueLabel: valueLabel
 
     Slider {
         id: saturationSlider
-        x: 100
-        y: 250
+        x: 220
+        y: 299
         to: 100
         stepSize: 1
         value: 100
@@ -21,8 +23,8 @@ Page {
 
     Slider {
         id: valueSlider
-        x: 100
-        y: 300
+        x: 219
+        y: 346
         to: 100
         stepSize: 1
         value: 0
@@ -30,8 +32,8 @@ Page {
 
     Slider {
         id: hueSlider
-        x: 100
-        y: 200
+        x: 219
+        y: 244
         focusPolicy: Qt.NoFocus
         to: 360
         stepSize: 1
@@ -40,8 +42,8 @@ Page {
 
     Text {
         id: hLabel
-        x: 75
-        y: 205
+        x: 194
+        y: 249
         width: 22
         height: 27
         text: qsTr("H")
@@ -51,8 +53,8 @@ Page {
 
     Text {
         id: sLabel
-        x: 75
-        y: 255
+        x: 194
+        y: 299
         width: 22
         height: 27
         text: qsTr("S")
@@ -62,8 +64,8 @@ Page {
 
     Text {
         id: vLabel
-        x: 75
-        y: 305
+        x: 194
+        y: 348
         width: 22
         height: 27
         text: qsTr("V")
@@ -72,18 +74,44 @@ Page {
     }
 
     Text {
-        id: hexCodeLabel
-        x: 179
-        y: 100
-        text: qsTr("Text")
+        id: hueLabel
+        x: 425
+        y: 247
+        text: qsTr("hue")
+        renderType: Text.QtRendering
         font.pixelSize: 24
     }
 
-    Rectangle{
-        id: rect
-        x: 10
-        y: 10
-        width: 30
-        height: 30
+    Rectangle {
+        id: rectangle
+        x: 269
+        y: 52
+        width: 100
+        height: 100
+    }
+
+    Text {
+        id: saturationLabel
+        x: 425
+        y: 298
+        text: qsTr("sat")
+        font.pixelSize: 24
+    }
+
+    Text {
+        id: valueLabel
+        x: 425
+        y: 348
+        text: qsTr("val")
+        font.pixelSize: 24
+    }
+
+    Text {
+        id: hexCodeLabel
+        x: 298
+        y: 187
+        text: qsTr("hex")
+        horizontalAlignment: Text.AlignHCenter
+        font.pixelSize: 24
     }
 }

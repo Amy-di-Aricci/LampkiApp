@@ -1,6 +1,6 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.2
-import LampkiApp.TestViewModel 1.0
+import LampkiApp.RGBColorViewModel 1.0
 import LampkiApp.HSVColorViewModel 1.0
 
 ApplicationWindow {
@@ -9,10 +9,8 @@ ApplicationWindow {
     height: 480
     title: qsTr("Tabs")
 
-    Binding {target: testViewModel; property: "numberValue"; value: slider.value}
-
-    TestViewModel {
-        id: testViewModel
+    RGBColorViewModel {
+        id: rgbColorViewModel
     }
 
     HSVColorViewModel {
@@ -23,75 +21,16 @@ ApplicationWindow {
         anchors.fill: parent
         currentIndex: -2
 
-        Page {
-            Text {
-                id: aaa
-                text: testViewModel.numberValue
-                color: "#ffffff"
-            }
-
-            Text {
-                id: bbb
-                x: 336
-                y: 19
-                color: "#bbbbbb"
-                text: testViewModel.numberValue
-            }
-
-            Slider {
-                id: slider
-                x: 130
-                y: 124
-                to: 100
-                stepSize: 1
-                value: 50
-            }
-
-            Button {
-                id: button
-                x: 231
-                y: 281
-                text: qsTr("Button")
-                focusPolicy: Qt.StrongFocus
-                onClicked: {
-                    bbb.text = testViewModel.numberValue;
-                }
-            }
-        }
-
         ColorPickerForm{
             id: colorPickerForm
             Binding {target: hsvColorViewModel; property: "Hue"; value: colorPickerForm.hueSlider.value}
             Binding {target: hsvColorViewModel; property: "Saturation"; value: colorPickerForm.saturationSlider.value}
             Binding {target: hsvColorViewModel; property: "Value"; value: colorPickerForm.valueSlider.value}
-            //rect: Qt.hsva(colorViewModel.Hue/360, colorViewModel.Saturation/100, colorViewModel.Value/100, 1)
-            rect.color: Qt.hsva(hsvColorViewModel.Hue/360, hsvColorViewModel.Saturation/100, hsvColorViewModel.Value/100, 1)
-            hexCodeLabel.text: hsvColorViewModel.Hue
+            rectangle.color: Qt.hsva(hsvColorViewModel.Hue/360, hsvColorViewModel.Saturation/100, hsvColorViewModel.Value/100, 1)
+            hueLabel.text: hsvColorViewModel.Hue
+            saturationLabel.text: hsvColorViewModel.Saturation
+            valueLabel.text: hsvColorViewModel.Value
         }
 
     }
-
-    /*SwipeView {
-        id: swipeView
-        anchors.fill: parent
-        currentIndex: tabBar.currentIndex
-
-        Page1Form {
-        }
-
-        Page2Form {
-        }
-    }
-
-    footer: TabBar {
-        id: tabBar
-        currentIndex: swipeView.currentIndex
-
-        TabButton {
-            text: qsTr("Page 1")
-        }
-        TabButton {
-            text: qsTr("Page 2")
-        }
-    }*/
 }

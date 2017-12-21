@@ -28,3 +28,33 @@ QString RGBColorModel::AsHex()
 {
     return "";
 }
+
+int RGBColorModel::GetRed()
+{
+    return red;
+}
+
+void RGBColorModel::SetRed(int r)
+{
+    red = r;
+}
+
+int RGBColorModel::GetGreen()
+{
+    return green;
+}
+
+void RGBColorModel::SetGreen(int g)
+{
+    green = g;
+}
+
+int RGBColorModel::GetBlue()
+{
+    return blue;
+}
+
+void RGBColorModel::SetBlue(int b)
+{
+    blue = b;
+}

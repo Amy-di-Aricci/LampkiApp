@@ -1,5 +1,5 @@
-#ifndef RGBCOLOR_H
-#define RGBCOLOR_H
+#ifndef RGBCOLORMODEL_H
+#define RGBCOLORMODEL_H
 
 #include "acolormodel.h"
 #include <QString>
@@ -15,7 +15,12 @@ public:
     virtual AColorModel* AsRGB();
     virtual AColorModel* AsHSV();
     virtual QString AsHex();
-    /*TODO: get, set*/
+    int GetRed();
+    void SetRed(int r);
+    int GetGreen();
+    void SetGreen(int g);
+    int GetBlue();
+    void SetBlue(int b);
 };
 
-#endif // RGBCOLOR_H
+#endif // RGBCOLORMODEL_H

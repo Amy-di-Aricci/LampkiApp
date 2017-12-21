@@ -3,7 +3,6 @@
 HSVColorViewModel::HSVColorViewModel(QObject *parent) : QObject(parent)
 {
     _colorModel = HSVColorModel();
-    qDebug("Konstruktor");
 }
 
 int HSVColorViewModel::Hue()
@@ -24,7 +23,6 @@ int HSVColorViewModel::Value()
 void HSVColorViewModel::setHue(int h)
 {
     _colorModel.SetHue(h);
-    qDebug("Dzialam w srodku");
     emit HueChanged(h);
 }
 

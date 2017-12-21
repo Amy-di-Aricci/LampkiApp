@@ -13,12 +13,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += main.cpp \
-    test.cpp \
-    testviewmodel.cpp \
     colormodel.cpp \
     hsvcolormodel.cpp \
     rgbcolormodel.cpp \
-    hsvcolorviewmodel.cpp
+    hsvcolorviewmodel.cpp \
+    rgbcolorviewmodel.cpp
 
 RESOURCES += qml.qrc
 
@@ -34,10 +33,9 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    test.h \
-    testviewmodel.h \
     colormodel.h \
     acolormodel.h \
     hsvcolormodel.h \
     rgbcolormodel.h \
-    hsvcolorviewmodel.h
+    hsvcolorviewmodel.h \
+    rgbcolorviewmodel.h
