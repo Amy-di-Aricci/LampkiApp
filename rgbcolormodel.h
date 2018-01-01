@@ -3,6 +3,7 @@
 
 #include "acolormodel.h"
 #include <QString>
+#include <memory>
 
 class RGBColorModel : public AColorModel
 {
@@ -12,9 +13,9 @@ class RGBColorModel : public AColorModel
 public:
     RGBColorModel();
     RGBColorModel(int r, int g, int b);
-    virtual AColorModel* AsRGB();
-    virtual AColorModel* AsHSV();
-    virtual QString AsHex();
+    std::unique_ptr<AColorModel> AsRGB() override;
+    std::unique_ptr<AColorModel> AsHSV() override;
+    QString AsHex() override;
     int GetRed();
     void SetRed(int r);
     int GetGreen();

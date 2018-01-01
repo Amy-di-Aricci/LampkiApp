@@ -1,7 +1,7 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.2
-import LampkiApp.RGBColorViewModel 1.0
-import LampkiApp.HSVColorViewModel 1.0
+import LampkiAppSwipe.RGBColorViewModel 1.0
+import LampkiAppSwipe.HSVColorViewModel 1.0
 
 ApplicationWindow {
     visible: true

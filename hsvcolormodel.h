@@ -2,6 +2,8 @@
 #define HSVCOLORMODEL_H
 
 #include "acolormodel.h"
+#include "rgbcolormodel.h"
+#include <memory>
 #include <QString>
 
 class HSVColorModel : public AColorModel
@@ -12,8 +14,9 @@ class HSVColorModel : public AColorModel
 public:
     HSVColorModel();
     HSVColorModel(int h, int s, int v);
-    AColorModel* AsRGB() override;
-    AColorModel* AsHSV() override;
+    RGBColorModel ParseToRGB();
+    std::unique_ptr<AColorModel> AsRGB() override;
+    std::unique_ptr<AColorModel> AsHSV() override;
     QString AsHex();
     int GetHue();
     void SetHue(int h);

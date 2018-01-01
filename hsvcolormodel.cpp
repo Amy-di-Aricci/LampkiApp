@@ -1,9 +1,10 @@
 #include "hsvcolormodel.h"
+#include <math.h>
 
 HSVColorModel::HSVColorModel()
 {
-    hue = 0;
-    saturation = 0;
+    hue = 60;
+    saturation = 100;
     value = 100;
 }
 
@@ -14,12 +15,54 @@ HSVColorModel::HSVColorModel(int h, int s, int v)
     value = v;
 }
 
-AColorModel *HSVColorModel::AsRGB()
+std::unique_ptr<RGBColorModel> HSVColorModel::ParseToRGB()
 {
-    return this;
+    int h = this->hue/60;
+    int s = (this->saturation)/100;
+    int v = (this->value)/100;
+
+    int C = s*v;
+    int X = C*(1 - std::abs(h % 2 - 1));
+    int m = v-C;
+
+    int rgbprim[3];
+    int rgb[3];
+
+    switch(h)
+    {
+        case 0:
+        rgbprim = {C,X,0};
+        break;
+    case 1:
+        rgbprim = {X,C,0};
+        break;
+    case 2:
+        rgbprim = {0,C,X};
+        break;
+    case 3:
+        rgbprim = {0,X,C};
+        break;
+    case 4:
+        rgbprim = {X,0,C};
+        break;
+    case 5:
+        rgbprim = {C,0,X};
+        break;
+    default:
+        rgbprim = {0,0,0};
+    }
+
+    rgb = {(rgbprim[0]+m)*255, (rgbprim[1]+m)*255, (rgbprim[2]+m)*255};
+
+    return std::make_unique<RGBColorModel>(rgb[0], rgb[1], rgb[2]);
 }
 
-AColorModel *HSVColorModel::AsHSV()
+std::unique_ptr<AColorModel> HSVColorModel::AsRGB()
+{
+    return this->ParseToRGB();
+}
+
+std::unique_ptr<AColorModel> HSVColorModel::AsHSV()
 {
     return this;
 }

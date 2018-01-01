@@ -1,9 +1,8 @@
 <RCC>
     <qresource prefix="/">
-        <file>main.qml</file>
-        <file>main.qml</file>
         <file>qtquickcontrols2.conf</file>
         <file>ColorPicker.qml</file>
         <file>ColorPickerForm.ui.qml</file>
+        <file>main.qml</file>
     </qresource>
 </RCC>

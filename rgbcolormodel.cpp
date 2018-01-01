@@ -3,8 +3,8 @@
 RGBColorModel::RGBColorModel()
 {
     red = 255;
-    green = 255;
-    blue = 255;
+    green = 0;
+    blue = 0;
 }
 
 RGBColorModel::RGBColorModel(int r, int g, int b)
@@ -14,12 +14,12 @@ RGBColorModel::RGBColorModel(int r, int g, int b)
     blue = b;
 }
 
-AColorModel *RGBColorModel::AsRGB()
+std::unique_ptr<AColorModel>RGBColorModel::AsRGB()
 {
     return this;
 }
 
-AColorModel *RGBColorModel::AsHSV()
+std::unique_ptr<AColorModel>RGBColorModel::AsHSV()
 {
     return this;
 }

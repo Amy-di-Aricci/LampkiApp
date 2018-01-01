@@ -11,6 +11,7 @@ Page {
     property alias hueLabel: hueLabel
     property alias saturationLabel: saturationLabel
     property alias valueLabel: valueLabel
+    property alias hexCodeLabel: hexCodeLabel
 
     Slider {
         id: saturationSlider
@@ -27,7 +28,7 @@ Page {
         y: 346
         to: 100
         stepSize: 1
-        value: 0
+        value: 100
     }
 
     Slider {
@@ -36,8 +37,8 @@ Page {
         y: 244
         focusPolicy: Qt.NoFocus
         to: 360
-        stepSize: 1
-        value: 180
+        stepSize: 0.8
+        value: 0
     }
 
     Text {
@@ -73,7 +74,7 @@ Page {
         fontSizeMode: Text.VerticalFit
     }
 
-    Text {
+    TextEdit {
         id: hueLabel
         x: 425
         y: 247
@@ -90,7 +91,7 @@ Page {
         height: 100
     }
 
-    Text {
+    TextEdit {
         id: saturationLabel
         x: 425
         y: 298
@@ -98,7 +99,7 @@ Page {
         font.pixelSize: 24
     }
 
-    Text {
+    TextEdit {
         id: valueLabel
         x: 425
         y: 348
@@ -106,7 +107,7 @@ Page {
         font.pixelSize: 24
     }
 
-    Text {
+    TextEdit {
         id: hexCodeLabel
         x: 298
         y: 187
