@@ -4,7 +4,7 @@
 #include "acolormodel.h"
 #include <QString>
 #include <memory>
-
+class HSVColorModel;
 class RGBColorModel : public AColorModel
 {
     int red;
@@ -13,15 +13,16 @@ class RGBColorModel : public AColorModel
 public:
     RGBColorModel();
     RGBColorModel(int r, int g, int b);
+    std::unique_ptr<HSVColorModel> ParseToHSV();
     std::unique_ptr<AColorModel> AsRGB() override;
     std::unique_ptr<AColorModel> AsHSV() override;
     QString AsHex() override;
-    int GetRed();
-    void SetRed(int r);
-    int GetGreen();
-    void SetGreen(int g);
-    int GetBlue();
-    void SetBlue(int b);
+    int GetRH() override;
+    int GetGS() override;
+    int GetBV() override;
+    void SetRH(int rh) override;
+    void SetGS(int gs) override;
+    void SetBV(int bv) override;
 };
 
 #endif // RGBCOLORMODEL_H

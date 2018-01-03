@@ -7,34 +7,34 @@ HSVColorViewModel::HSVColorViewModel(QObject *parent) : QObject(parent)
 
 int HSVColorViewModel::Hue()
 {
-    return _colorModel.GetHue();
+    return _colorModel.GetRH();
 }
 
 int HSVColorViewModel::Saturation()
 {
-    return _colorModel.GetSaturation();
+    return _colorModel.GetGS();
 }
 
 int HSVColorViewModel::Value()
 {
-    return _colorModel.GetValue();
+    return _colorModel.GetBV();
 }
 
 void HSVColorViewModel::setHue(int h)
 {
-    _colorModel.SetHue(h);
+    _colorModel.SetRH(h);
     emit HueChanged(h);
 }
 
 void HSVColorViewModel::setSaturation(int s)
 {
-    _colorModel.SetSaturation(s);
+    _colorModel.SetGS(s);
     emit SaturationChanged(s);
 }
 
 void HSVColorViewModel::setValue(int v)
 {
-    _colorModel.SetValue(v);
+    _colorModel.SetBV(v);
     emit ValueChanged(v);
 }
 

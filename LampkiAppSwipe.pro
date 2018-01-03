@@ -15,8 +15,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += main.cpp \
     hsvcolormodel.cpp \
     rgbcolormodel.cpp \
-    hsvcolorviewmodel.cpp \
-    rgbcolorviewmodel.cpp
+    hsvcolorviewmodel.cpp
 
 RESOURCES += qml.qrc
 
@@ -35,5 +34,4 @@ HEADERS += \
     acolormodel.h \
     hsvcolormodel.h \
     rgbcolormodel.h \
-    hsvcolorviewmodel.h \
-    rgbcolorviewmodel.h
+    hsvcolorviewmodel.h
