@@ -34,10 +34,14 @@ ApplicationWindow {
             button.onClicked: {
                 console.log("RH=", colorViewModel.RH, "GS=", colorViewModel.GS, "BV=", colorViewModel.BV);
                 hexCodeLabel.text = colorViewModel.Hex;
+                colorViewModel.SendUnicolor();
             }
-            colorViewModel.onTypeSelectionChanged:
+            Connections
             {
-                console.log("Wykonałem się");
+                target: colorViewModel
+                onTypeSelectionChanged: {
+                    console.log("Chuj");
+                }
             }
         }
 

@@ -15,7 +15,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += main.cpp \
     Models/hsvcolormodel.cpp \
     ViewModels/colorviewmodel.cpp \
-    Models/rgbcolormodel.cpp
+    Models/rgbcolormodel.cpp \
+    Helpers/jsonhelper.cpp \
+    Helpers/resthelper.cpp
 
 RESOURCES += qml.qrc
 
@@ -35,3 +37,5 @@ HEADERS += \
     Models/hsvcolormodel.h \
     Models/rgbcolormodel.h \
     ViewModels/colorviewmodel.h \
+    Helpers/jsonhelper.h \
+    Helpers/resthelper.h

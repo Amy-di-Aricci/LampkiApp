@@ -1,7 +1,9 @@
 #include "ViewModels/colorviewmodel.h"
 #include "Models/hsvcolormodel.h"
 #include "Models/rgbcolormodel.h"
+#include "Models/acolormodel.h"
 #include <memory>
+#include <QJsonDocument>
 
 ColorViewModel::ColorViewModel(QObject *parent) : QObject(parent)
 {
@@ -31,6 +33,12 @@ int ColorViewModel::GetTypeSelection()
 QString ColorViewModel::GetHex()
 {
     return _colorModel->AsHex();
+}
+
+void ColorViewModel::SendUnicolor()
+{
+    //QJsonDocument jsonDoc = jsonColor.ParseToJson(*_colorModel);
+    restHelper.SendColor(jsonColor.UnicolorToJson(*_colorModel));
 }
 
 void ColorViewModel::SetRH(int rh)

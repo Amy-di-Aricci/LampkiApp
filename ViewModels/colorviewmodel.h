@@ -2,8 +2,11 @@
 #define COLORVIEWMODEL_H
 
 #include <QObject>
+#include <QString>
 #include <memory>
 #include "Models/acolormodel.h"
+#include "Helpers/jsonhelper.h"
+#include "Helpers/resthelper.h"
 
 class HSVColorModel;
 class RGBColorModel;
@@ -15,6 +18,8 @@ class ColorViewModel : public QObject
 private:
     std::unique_ptr<AColorModel> _colorModel;
     int _typeSelection;
+    JSONHelper jsonColor;
+    RestHelper restHelper;
     Q_PROPERTY(int RH READ GetRH WRITE SetRH NOTIFY RHChanged)
     Q_PROPERTY(int GS READ GetGS WRITE SetGS NOTIFY GSChanged)
     Q_PROPERTY(int BV READ GetBV WRITE SetBV NOTIFY BVChanged)
@@ -28,6 +33,7 @@ public:
     int GetBV();
     int GetTypeSelection();
     QString GetHex();
+    Q_INVOKABLE void SendUnicolor();
 
 signals:
     void RHChanged(int arg);
