@@ -1,7 +1,7 @@
 #ifndef RGBCOLORMODEL_H
 #define RGBCOLORMODEL_H
 
-#include "acolormodel.h"
+#include "Models/acolormodel.h"
 #include <QString>
 #include <memory>
 class HSVColorModel;

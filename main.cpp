@@ -1,6 +1,6 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-#include "hsvcolorviewmodel.h"
+#include "ViewModels/colorviewmodel.h"
 
 int main(int argc, char *argv[])
 {
@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 
     QGuiApplication app(argc, argv);
 
-    qmlRegisterType<HSVColorViewModel>("LampkiAppSwipe.HSVColorViewModel", 1, 0, "HSVColorViewModel");
+    qmlRegisterType<ColorViewModel>("LampkiAppSwipe.ColorViewModel", 1, 0, "ColorViewModel");
     QQmlApplicationEngine engine;
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
     if (engine.rootObjects().isEmpty())

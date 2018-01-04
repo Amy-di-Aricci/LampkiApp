@@ -1,6 +1,6 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.2
-import LampkiAppSwipe.HSVColorViewModel 1.0
+import LampkiAppSwipe.ColorViewModel 1.0
 
 ApplicationWindow {
     visible: true
@@ -8,8 +8,8 @@ ApplicationWindow {
     height: 480
     title: qsTr("Tabs")
 
-    HSVColorViewModel {
-        id: hsvColorViewModel
+    ColorViewModel {
+        id: colorViewModel
     }
 
     SwipeView {
@@ -18,13 +18,13 @@ ApplicationWindow {
 
         ColorPickerForm{
             id: colorPickerForm
-            Binding {target: hsvColorViewModel; property: "Hue"; value: colorPickerForm.hueSlider.value}
-            Binding {target: hsvColorViewModel; property: "Saturation"; value: colorPickerForm.saturationSlider.value}
-            Binding {target: hsvColorViewModel; property: "Value"; value: colorPickerForm.valueSlider.value}
-            rectangle.color: Qt.hsva(hsvColorViewModel.Hue/360, hsvColorViewModel.Saturation/100, hsvColorViewModel.Value/100, 1)
-            hueLabel.text: hsvColorViewModel.Hue
-            saturationLabel.text: hsvColorViewModel.Saturation
-            valueLabel.text: hsvColorViewModel.Value
+            Binding {target: colorViewModel; property: "Hue"; value: colorPickerForm.hueSlider.value}
+            Binding {target: colorViewModel; property: "Saturation"; value: colorPickerForm.saturationSlider.value}
+            Binding {target: colorViewModel; property: "Value"; value: colorPickerForm.valueSlider.value}
+            rectangle.color: Qt.hsva(colorViewModel.Hue/360, colorViewModel.Saturation/100, colorViewModel.Value/100, 1)
+            hueLabel.text: colorViewModel.Hue
+            saturationLabel.text: colorViewModel.Saturation
+            valueLabel.text: colorViewModel.Value
         }
 
     }

@@ -1,5 +1,6 @@
-#include "hsvcolormodel.h"
-#include "rgbcolormodel.h"
+#include "Models/hsvcolormodel.h"
+#include "Models/rgbcolormodel.h"
+#include "Models/acolormodel.h"
 #include <math.h>
 
 HSVColorModel::HSVColorModel()
@@ -18,59 +19,55 @@ HSVColorModel::HSVColorModel(int h, int s, int v)
 
 std::unique_ptr<RGBColorModel> HSVColorModel::ParseToRGB()
 {
-    int h = hue/60;
-    int s = saturation/100;
-    int v = value/100;
+    const int h = (hue%360)/60;
+    const int s = saturation/100;
+    const int v = value/100;
 
-    int C = s*v;
-    int X = C*(1 - std::abs(h % 2 - 1));
-    int m = v-C;
+    const int C = s*v;
+    const int X = C*(1 - std::abs(h % 2 - 1));
+    const int m = v-C;
 
-    int rgbprim[3] = {0,0,0};
+    int r = 0;
+    int g = 0;
+    int b = 0;
 
-    switch(h)
+    switch(h) //rozpatrywane przypadki dla 60-stopniowych zakresow
     {
         case 0:
-        //rgbprim = {C,X,0};
-        rgbprim[0] = C;
-        rgbprim[1] = X;
-        rgbprim[2] = 0;
+        r = C;
+        g = X;
+        b = 0;
         break;
     case 1:
-        //rgbprim = {X,C,0};
-        rgbprim[0] = X;
-        rgbprim[1] = C;
-        rgbprim[2] = 0;
+        r = X;
+        g = C;
+        b = 0;
         break;
     case 2:
-        //rgbprim = {0,C,X};
-        rgbprim[0] = 0;
-        rgbprim[1] = C;
-        rgbprim[2] = X;
+        r = 0;
+        g = C;
+        b = X;
         break;
     case 3:
-        //rgbprim = {0,X,C};
-        rgbprim[0] = 0;
-        rgbprim[1] = X;
-        rgbprim[2] = C;
+        r = 0;
+        g = X;
+        b = C;
         break;
     case 4:
-        //rgbprim = {X,0,C};
-        rgbprim[0] = X;
-        rgbprim[1] = 0;
-        rgbprim[2] = C;
+        r = X;
+        g = 0;
+        b = C;
         break;
     case 5:
-        //rgbprim = {C,0,X};
-        rgbprim[0] = C;
-        rgbprim[1] = 0;
-        rgbprim[2] = X;
+        r = C;
+        g = 0;
+        b = X;
         break;
     default:
         break;
     }
 
-    int rgb[3] = {(rgbprim[0]+m)*255, (rgbprim[1]+m)*255, (rgbprim[2]+m)*255};
+    int rgb[3] = {(r+m)*255, (g+m)*255, (b+m)*255};
 
     return std::make_unique<RGBColorModel>(rgb[0], rgb[1], rgb[2]);
 }

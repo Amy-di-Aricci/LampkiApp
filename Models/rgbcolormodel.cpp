@@ -1,5 +1,5 @@
-#include "rgbcolormodel.h"
-#include "hsvcolormodel.h"
+#include "Models/rgbcolormodel.h"
+#include "Models/hsvcolormodel.h"
 #include <algorithm>
 
 RGBColorModel::RGBColorModel()

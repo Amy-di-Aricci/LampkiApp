@@ -1,7 +1,7 @@
 #ifndef HSVCOLORMODEL_H
 #define HSVCOLORMODEL_H
 
-#include "acolormodel.h"
+#include "Models/acolormodel.h"
 #include <memory>
 #include <QString>
 
