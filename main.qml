@@ -35,7 +35,10 @@ ApplicationWindow {
                 console.log("RH=", colorViewModel.RH, "GS=", colorViewModel.GS, "BV=", colorViewModel.BV);
                 hexCodeLabel.text = colorViewModel.Hex;
             }
-
+            colorViewModel.onTypeSelectionChanged:
+            {
+                console.log("Wykonałem się");
+            }
         }
 
     }
