@@ -5,14 +5,17 @@ import QtQuick.Controls.Material 2.0
 Page {
     id: page
     contentWidth: -2
-    property alias hueSlider: hueSlider
-    property alias saturationSlider: saturationSlider
-    property alias valueSlider: valueSlider
+    property alias rhSlider: rhSlider
+    property alias gsSlider: gsSlider
+    property alias bvSlider: bvSlider
     property alias rectangle: rectangle
-    property alias hueLabel: hueLabel
-    property alias saturationLabel: saturationLabel
-    property alias valueLabel: valueLabel
     property alias hexCodeLabel: hexCodeLabel
+    property alias rhValueLabel: rhValueLabel
+    property alias gsValueLabel: gsValueLabel
+    property alias bvValueLabel: bvValueLabel
+    property alias comboBox: comboBox
+    property alias button: button
+
 
     Column {
         id: sliders
@@ -22,72 +25,72 @@ Page {
         height: 400
 
         TextEdit {
-            id: valueLabel
+            id: bvValueLabel
             text: qsTr("val")
-            anchors.verticalCenter: valueSlider.verticalCenter
-            anchors.left: valueSlider.right
+            anchors.verticalCenter: bvSlider.verticalCenter
+            anchors.left: bvSlider.right
             anchors.leftMargin: 10
             font.pixelSize: 24
         }
 
         TextEdit {
-            id: saturationLabel
+            id: gsValueLabel
             text: qsTr("sat")
-            anchors.right: valueLabel.right
+            anchors.right: bvValueLabel.right
             anchors.rightMargin: 0
-            anchors.verticalCenter: saturationSlider.verticalCenter
+            anchors.verticalCenter: gsSlider.verticalCenter
             font.pixelSize: 24
         }
 
         TextEdit {
-            id: hueLabel
+            id: rhValueLabel
             text: qsTr("hue")
-            anchors.verticalCenter: hueSlider.verticalCenter
-            anchors.right: saturationLabel.right
+            anchors.verticalCenter: rhSlider.verticalCenter
+            anchors.right: gsValueLabel.right
             anchors.rightMargin: 0
             renderType: Text.QtRendering
             font.pixelSize: 24
         }
 
         Text {
-            id: vLabel
+            id: bvLabel
             width: 22
             height: 27
             text: qsTr("V")
-            anchors.right: valueSlider.left
+            anchors.right: bvSlider.left
             anchors.rightMargin: 10
-            anchors.verticalCenter: valueLabel.verticalCenter
+            anchors.verticalCenter: bvValueLabel.verticalCenter
             font.pixelSize: 24
             fontSizeMode: Text.VerticalFit
         }
 
         Text {
-            id: sLabel
+            id: gsLabel
             width: 22
             height: 27
             text: qsTr("S")
-            anchors.right: vLabel.right
+            anchors.right: bvLabel.right
             anchors.rightMargin: 0
-            anchors.verticalCenter: saturationSlider.verticalCenter
+            anchors.verticalCenter: gsSlider.verticalCenter
             font.pixelSize: 24
             fontSizeMode: Text.VerticalFit
         }
 
         Text {
-            id: hLabel
+            id: rhLabel
             width: 22
             height: 27
             text: qsTr("H")
-            anchors.right: sLabel.right
+            anchors.right: gsLabel.right
             anchors.rightMargin: 0
-            anchors.verticalCenter: hueSlider.verticalCenter
+            anchors.verticalCenter: rhSlider.verticalCenter
             fontSizeMode: Text.VerticalFit
             font.pixelSize: 24
         }
 
         Slider {
-            id: hueSlider
-            anchors.top: saturationSlider.top
+            id: rhSlider
+            anchors.top: gsSlider.top
             anchors.topMargin: -75
             anchors.horizontalCenter: parent.horizontalCenter
             focusPolicy: Qt.NoFocus
@@ -97,8 +100,8 @@ Page {
         }
 
         Slider {
-            id: valueSlider
-            anchors.bottom: saturationSlider.bottom
+            id: bvSlider
+            anchors.bottom: gsSlider.bottom
             anchors.bottomMargin: -75
             anchors.horizontalCenter: parent.horizontalCenter
             to: 100
@@ -107,7 +110,7 @@ Page {
         }
 
         Slider {
-            id: saturationSlider
+            id: gsSlider
             anchors.verticalCenter: parent.verticalCenter
             anchors.horizontalCenter: parent.horizontalCenter
             to: 100
@@ -143,5 +146,27 @@ Page {
             horizontalAlignment: Text.AlignHCenter
             font.pixelSize: 24
         }
+    }
+
+    ComboBox {
+        id: comboBox
+        x: 394
+        y: 61
+        model: ListModel {
+            id: cbItems
+            ListElement {
+                text: "HSV"
+            }
+            ListElement {
+                text: "RGB"
+            }
+        }
+    }
+
+    Button {
+        id: button
+        x: 419
+        y: 387
+        text: qsTr("Button")
     }
 }

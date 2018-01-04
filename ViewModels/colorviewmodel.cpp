@@ -23,6 +23,16 @@ int ColorViewModel::GetBV()
     return _colorModel->GetBV();
 }
 
+int ColorViewModel::GetTypeSelection()
+{
+    return this->_typeSelection;
+}
+
+QString ColorViewModel::GetHex()
+{
+    return _colorModel->AsHex();
+}
+
 void ColorViewModel::SetRH(int rh)
 {
     _colorModel->SetRH(rh);
@@ -41,17 +51,24 @@ void ColorViewModel::SetBV(int bv)
     emit BVChanged(bv);
 }
 
-void ColorViewModel::TypeChange(int selection)
+void ColorViewModel::SetTypeSelection(int selection)
 {
     switch(selection)
     {
     case 0:
-        _colorModel = std::move(_colorModel->AsRGB());
+        _colorModel = std::move(_colorModel->AsHSV());
+        emit TypeSelectionChanged(selection);
         break;
     case 1:
-        _colorModel = std::move(_colorModel->AsHSV());
+        _colorModel = std::move(_colorModel->AsRGB());
+        emit TypeSelectionChanged(selection);
+        break;
     default:
         break;
     }
-    //emit TypeChange(selection);
+}
+
+void ColorViewModel::SetHex(QString hex)
+{
+    emit HexChanged(hex);
 }

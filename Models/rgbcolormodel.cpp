@@ -1,6 +1,10 @@
 #include "Models/rgbcolormodel.h"
 #include "Models/hsvcolormodel.h"
 #include <algorithm>
+#include <sstream>
+#include <ios>
+#include <iomanip>
+#include <cmath>
 
 RGBColorModel::RGBColorModel()
 {
@@ -19,13 +23,13 @@ RGBColorModel::RGBColorModel(int r, int g, int b)
 std::unique_ptr<HSVColorModel> RGBColorModel::ParseToHSV()
 {
     //inicjalizacja zmiennych pomocniczych
-    const int r = red/255;
-    const int g = green/255;
-    const int b = blue/255;
+    const double r = red/255.0;
+    const double g = green/255.0;
+    const double b = blue/255.0;
 
-    const int Cmax = std::max(r, std::max(g,b));
-    const int Cmin = std::min(r, std::min(g,b));
-    const int delta = Cmax - Cmin;
+    const double Cmax = std::max(r, std::max(g,b));
+    const double Cmin = std::min(r, std::min(g,b));
+    const double delta = Cmax - Cmin;
 
     int h = 0;
     int s = 0;
@@ -35,7 +39,7 @@ std::unique_ptr<HSVColorModel> RGBColorModel::ParseToHSV()
     if(delta == 0)
         h = 0;
     else if (Cmax == r)
-        h = 60*(((g-b)/delta)%6);
+        h = 60*std::fmod(((g-b)/delta),6);
     else if (Cmax == g)
         h = 60*((b-r)/delta + 2);
     else if (Cmax == b)
@@ -43,10 +47,10 @@ std::unique_ptr<HSVColorModel> RGBColorModel::ParseToHSV()
 
     //obliczanie skladowej Saturation
     if(Cmax != 0)
-        s = delta/Cmax;
+        s = (delta/Cmax)*100;
 
     //obliczanie skladowej Value
-    v = Cmax;
+    v = Cmax*100;
 
     return std::make_unique<HSVColorModel>(h, s, v);
 }
@@ -63,7 +67,12 @@ std::unique_ptr<AColorModel>RGBColorModel::AsHSV()
 
 QString RGBColorModel::AsHex()
 {
-    return "";
+    std::stringstream hexHelper;
+    hexHelper << "#";
+    hexHelper << std::setfill('0') << std::setw(2) << std::hex << this->GetRH();
+    hexHelper << std::setfill('0') << std::setw(2) << std::hex << this->GetGS();
+    hexHelper << std::setfill('0') << std::setw(2) << std::hex << this->GetBV();
+    return QString::fromStdString(hexHelper.str());
 }
 
 int RGBColorModel::GetRH()

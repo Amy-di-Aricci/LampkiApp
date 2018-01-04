@@ -15,17 +15,29 @@ ApplicationWindow {
     SwipeView {
         anchors.fill: parent
         currentIndex: -2
-
+        /*ColorViewModel {
+            id: colorViewModel
+            onTypeSelectionChanged: {
+                console.log("cokolwiek");
+            }
+        }*/
         ColorPickerForm{
             id: colorPickerForm
-            Binding {target: colorViewModel; property: "Hue"; value: colorPickerForm.hueSlider.value}
-            Binding {target: colorViewModel; property: "Saturation"; value: colorPickerForm.saturationSlider.value}
-            Binding {target: colorViewModel; property: "Value"; value: colorPickerForm.valueSlider.value}
-            rectangle.color: Qt.hsva(colorViewModel.Hue/360, colorViewModel.Saturation/100, colorViewModel.Value/100, 1)
-            hueLabel.text: colorViewModel.Hue
-            saturationLabel.text: colorViewModel.Saturation
-            valueLabel.text: colorViewModel.Value
+            Binding {target: colorViewModel; property: "RH"; value: colorPickerForm.rhSlider.value}
+            Binding {target: colorViewModel; property: "GS"; value: colorPickerForm.gsSlider.value}
+            Binding {target: colorViewModel; property: "BV"; value: colorPickerForm.bvSlider.value}
+            Binding {target: colorViewModel; property: "TypeSelection"; value: colorPickerForm.comboBox.currentIndex}
+            rectangle.color: Qt.hsva(colorViewModel.RH/360, colorViewModel.GS/100, colorViewModel.BV/100, 1)
+            rhValueLabel.text: colorViewModel.RH
+            gsValueLabel.text: colorViewModel.GS
+            bvValueLabel.text: colorViewModel.BV
+            button.onClicked: {
+                console.log("RH=", colorViewModel.RH, "GS=", colorViewModel.GS, "BV=", colorViewModel.BV);
+                hexCodeLabel.text = colorViewModel.Hex;
+            }
+
         }
 
     }
+
 }

@@ -2,6 +2,9 @@
 #include "Models/rgbcolormodel.h"
 #include "Models/acolormodel.h"
 #include <math.h>
+#include <sstream>
+#include <ios>
+#include <iomanip>
 
 HSVColorModel::HSVColorModel()
 {
@@ -19,19 +22,20 @@ HSVColorModel::HSVColorModel(int h, int s, int v)
 
 std::unique_ptr<RGBColorModel> HSVColorModel::ParseToRGB()
 {
-    const int h = (hue%360)/60;
-    const int s = saturation/100;
-    const int v = value/100;
+    const double h = (hue%360)/60.0;
+    const double s = saturation/100.0;
+    const double v = value/100.0;
 
-    const int C = s*v;
-    const int X = C*(1 - std::abs(h % 2 - 1));
-    const int m = v-C;
+    const double C = s*v;
+    const double X = C*(1 - std::abs(std::fmod(h,2) - 1));
+    const double m = v-C;
 
-    int r = 0;
-    int g = 0;
-    int b = 0;
+    double r = 0;
+    double g = 0;
+    double b = 0;
 
-    switch(h) //rozpatrywane przypadki dla 60-stopniowych zakresow
+    int helper = h;
+    switch(helper) //rozpatrywane przypadki dla 60-stopniowych zakresow
     {
         case 0:
         r = C;
@@ -84,7 +88,13 @@ std::unique_ptr<AColorModel> HSVColorModel::AsHSV()
 
 QString HSVColorModel::AsHex()
 {
-    return "";
+    std::unique_ptr<AColorModel> RGBhelper = this->AsRGB();
+    std::stringstream hexHelper;
+    hexHelper << "#";
+    hexHelper << std::setfill('0') << std::setw(2) << std::hex << RGBhelper->GetRH();
+    hexHelper << std::setfill('0') << std::setw(2) << std::hex << RGBhelper->GetGS();
+    hexHelper << std::setfill('0') << std::setw(2) << std::hex << RGBhelper->GetBV();
+    return QString::fromStdString(hexHelper.str());
 }
 
 void HSVColorModel::SetRH(int rh)
