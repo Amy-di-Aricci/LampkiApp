@@ -47,18 +47,21 @@ void ColorViewModel::SetRH(int rh)
 {
     _colorModel->SetRH(rh);
     emit RHChanged(rh);
+    emit hexChanged(_colorModel->AsHex());
 }
 
 void ColorViewModel::SetGS(int gs)
 {
     _colorModel->SetGS(gs);
     emit GSChanged(gs);
+    emit hexChanged(_colorModel->AsHex());
 }
 
 void ColorViewModel::SetBV(int bv)
 {
     _colorModel->SetBV(bv);
     emit BVChanged(bv);
+    emit hexChanged(_colorModel->AsHex());
 }
 
 void ColorViewModel::SetTypeSelection(int selection)

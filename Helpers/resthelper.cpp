@@ -6,7 +6,7 @@
 #include <QJsonDocument>
 #include <QDebug>
 
-RestHelper::RestHelper(QObject *parent) : QObject(parent), apiUrl(QString("http://192.168.1.4:5000/lights"))
+RestHelper::RestHelper(QObject *parent) : QObject(parent), apiUrl(QString("http://192.168.43.177:5000/lights"))
 {
 
 }
