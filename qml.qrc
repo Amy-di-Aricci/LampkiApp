@@ -4,5 +4,7 @@
         <file>ColorPicker.qml</file>
         <file>ColorPickerForm.ui.qml</file>
         <file>main.qml</file>
+        <file>GradientPicker.qml</file>
+        <file>GradientPickerForm.ui.qml</file>
     </qresource>
 </RCC>
