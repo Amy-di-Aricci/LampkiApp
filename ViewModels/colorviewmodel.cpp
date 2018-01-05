@@ -69,11 +69,17 @@ void ColorViewModel::SetTypeSelection(int selection)
     case 0:
         _colorModel = std::move(_colorModel->AsHSV());
         emit typeSelectionChanged(selection);
+        emit RHChanged(_colorModel->GetRH());
+        emit GSChanged(_colorModel->GetGS());
+        emit BVChanged(_colorModel->GetBV());
         _typeSelection = selection;
         break;
     case 1:
         _colorModel = std::move(_colorModel->AsRGB());
         emit typeSelectionChanged(selection);
+        emit RHChanged(_colorModel->GetRH());
+        emit GSChanged(_colorModel->GetGS());
+        emit BVChanged(_colorModel->GetBV());
         _typeSelection = selection;
         break;
     default:
@@ -83,5 +89,5 @@ void ColorViewModel::SetTypeSelection(int selection)
 
 void ColorViewModel::SetHex(QString hex)
 {
-    emit HexChanged(hex);
+    emit hexChanged(hex);
 }

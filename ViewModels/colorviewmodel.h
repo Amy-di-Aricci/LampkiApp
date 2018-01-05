@@ -24,7 +24,7 @@ private:
     Q_PROPERTY(int GS READ GetGS WRITE SetGS NOTIFY GSChanged)
     Q_PROPERTY(int BV READ GetBV WRITE SetBV NOTIFY BVChanged)
     Q_PROPERTY(int TypeSelection READ GetTypeSelection WRITE SetTypeSelection NOTIFY typeSelectionChanged)
-    Q_PROPERTY(QString Hex READ GetHex WRITE SetHex NOTIFY HexChanged)
+    Q_PROPERTY(QString Hex READ GetHex WRITE SetHex NOTIFY hexChanged)
 
 public:
     explicit ColorViewModel(QObject *parent = nullptr);
@@ -40,7 +40,7 @@ signals:
     void GSChanged(int arg);
     void BVChanged(int arg);
     void typeSelectionChanged(int arg);
-    void HexChanged(QString arg);
+    void hexChanged(QString arg);
 
 public slots:
     void SetRH(int rh);
