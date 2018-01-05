@@ -47,15 +47,15 @@ ApplicationWindow {
                     console.log(colorViewModel.TypeSelection)
                     if(colorViewModel.TypeSelection == 0)
                     {
-                        rhLabel.text = "H"
-                        gsLabel.text = "S"
-                        bvLabel.text = "V"
+                        colorPickerForm.rhLabel.text = "H";
+                        colorPickerForm.gsLabel.text = "S"
+                        colorPickerForm.bvLabel.text = "V"
                     }
                     else if(colorViewModel.TypeSelection == 1)
                     {
-                        rhLabel.text = "R"
-                        gsLabel.text = "G"
-                        bvLabel.text = "B"
+                        colorPickerForm.rhLabel.text = "R"
+                        colorPickerForm.gsLabel.text = "G"
+                        colorPickerForm.bvLabel.text = "B"
                     }
                 }
             }

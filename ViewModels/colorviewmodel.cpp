@@ -4,6 +4,7 @@
 #include "Models/acolormodel.h"
 #include <memory>
 #include <QJsonDocument>
+#include <QDebug>
 
 ColorViewModel::ColorViewModel(QObject *parent) : QObject(parent)
 {
@@ -62,17 +63,18 @@ void ColorViewModel::SetBV(int bv)
 
 void ColorViewModel::SetTypeSelection(int selection)
 {
+    qDebug() << "Selection: " << selection;
     switch(selection)
     {
     case 0:
         _colorModel = std::move(_colorModel->AsHSV());
         emit typeSelectionChanged(selection);
-        _typeSelection = 0;
+        _typeSelection = selection;
         break;
     case 1:
         _colorModel = std::move(_colorModel->AsRGB());
         emit typeSelectionChanged(selection);
-        _typeSelection = 1;
+        _typeSelection = selection;
         break;
     default:
         break;
