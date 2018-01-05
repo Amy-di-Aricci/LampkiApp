@@ -12,7 +12,7 @@ class RestHelper : public QObject
     QNetworkAccessManager manager;
 public:
     explicit RestHelper(QObject *parent = nullptr);
-    void SendColor(QJsonDocument jsonDoc);
+    void SendColor(QJsonDocument jsonDoc, QString api);
 signals:
 
 public slots:

@@ -40,7 +40,7 @@ QString ColorViewModel::GetHex()
 void ColorViewModel::SendUnicolor()
 {
     //QJsonDocument jsonDoc = jsonColor.ParseToJson(*_colorModel);
-    restHelper.SendColor(jsonColor.UnicolorToJson(*_colorModel));
+    restHelper.SendColor(jsonColor.UnicolorToJson(*_colorModel), QString("/unicolor"));
 }
 
 void ColorViewModel::SetRH(int rh)

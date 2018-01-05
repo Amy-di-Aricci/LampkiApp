@@ -11,9 +11,9 @@ RestHelper::RestHelper(QObject *parent) : QObject(parent), apiUrl(QString("http:
 
 }
 
-void RestHelper::SendColor(QJsonDocument jsonDoc)
+void RestHelper::SendColor(QJsonDocument jsonDoc, QString api)
 {
-    QNetworkRequest request(QUrl(apiUrl+"/unicolor"));
+    QNetworkRequest request(QUrl(apiUrl+api));
     request.setHeader(QNetworkRequest::ContentTypeHeader, QString("application/json"));
     QNetworkReply* reply = manager.put(request, jsonDoc.toJson(QJsonDocument::Compact));
     connect(reply, SIGNAL(finished()), this, SLOT(fished()));

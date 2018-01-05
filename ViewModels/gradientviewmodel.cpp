@@ -1,4 +1,20 @@
 #include "gradientviewmodel.h"
+#include <QDebug>
+QVector<QString> GradientViewModel::generateGradient()
+{
+    int diodeCount = 8;
+    QVector<QString> gradient;
+    RGBColorModel tempColor;
+    for(int i = 0; i<diodeCount; i++)
+    {
+        tempColor.SetRH((diodeCount-i-1)/(double)(diodeCount-1)*(_firstColor->AsRGB()->GetRH()) + i/(double)(diodeCount-1)*(_secondColor->AsRGB()->GetRH()));
+        tempColor.SetGS((diodeCount-i-1)/(double)(diodeCount-1)*(_firstColor->AsRGB()->GetGS()) + i/(double)(diodeCount-1)*(_secondColor->AsRGB()->GetGS()));
+        tempColor.SetBV((diodeCount-i-1)/(double)(diodeCount-1)*(_firstColor->AsRGB()->GetBV()) + i/(double)(diodeCount-1)*(_secondColor->AsRGB()->GetBV()));
+        gradient.push_back(tempColor.AsHex());
+    }
+    qDebug() << "Odpalony generator";
+    return gradient;
+}
 
 GradientViewModel::GradientViewModel(QObject *parent) : QObject(parent)
 {
@@ -46,6 +62,11 @@ int GradientViewModel::GetBV()
         return _secondColor->GetBV();
 }
 
+void GradientViewModel::SendGradient()
+{
+    restHelper.SendColor(jsonColor.MulticolorToJson(_gradientVector), QString("/multicolor"));
+}
+
 void GradientViewModel::setGradientVector(QVector<QString> vect)
 {
     _gradientVector = vect;
@@ -63,12 +84,12 @@ void GradientViewModel::SetRH(int color)
     if(_selectedDiode == 0)
     {
         _firstColor->SetRH(color);
-        _gradientVector[0] = _firstColor->AsHex();
     }
     else if(_selectedDiode == 1)
     {
         _secondColor->SetRH(color);
     }
+    _gradientVector = this->generateGradient();
     emit RHChanged(color);
     emit gradientVectorChanged(_gradientVector);
 }
@@ -78,12 +99,12 @@ void GradientViewModel::SetGS(int color)
     if(_selectedDiode == 0)
     {
         _firstColor->SetGS(color);
-        _gradientVector[0] = _firstColor->AsHex();
     }
     else if(_selectedDiode == 1)
     {
         _secondColor->SetGS(color);
     }
+    _gradientVector = this->generateGradient();
     emit GSChanged(color);
     emit gradientVectorChanged(_gradientVector);
 }
@@ -93,12 +114,12 @@ void GradientViewModel::SetBV(int color)
     if(_selectedDiode == 0)
     {
         _firstColor->SetBV(color);
-        _gradientVector[0] = _firstColor->AsHex();
     }
     else if(_selectedDiode == 1)
     {
         _secondColor->SetBV(color);
     }
+    _gradientVector = this->generateGradient();
     emit BVChanged(color);
     emit gradientVectorChanged(_gradientVector);
 }

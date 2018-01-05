@@ -14,3 +14,16 @@ QJsonDocument JSONHelper::UnicolorToJson(AColorModel& color)
     QJsonDocument jsonDoc(jsonObj);
     return jsonDoc;
 }
+
+QJsonDocument JSONHelper::MulticolorToJson(QVector<QString> colorArray)
+{
+    QJsonObject lightsObj;
+    for(int i = 0; i<colorArray.length(); i++)
+    {
+        lightsObj[QString::number(i)] = colorArray[i];
+    }
+    QJsonObject jsonObj;
+    jsonObj["lights"] = lightsObj;
+    QJsonDocument jsonDoc(jsonObj);
+    return jsonDoc;
+}
