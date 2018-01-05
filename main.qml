@@ -40,7 +40,23 @@ ApplicationWindow {
             {
                 target: colorViewModel
                 onTypeSelectionChanged: {
-                    console.log("Chuj");
+                    console.log("Dziolczy");
+                    var rhv = colorViewModel.RH;
+                    var gsv = colorViewModel.GS;
+                    var bvv = colorViewModel.BV;
+                    console.log(colorViewModel.TypeSelection)
+                    if(colorViewModel.TypeSelection == 0)
+                    {
+                        rhLabel.text = "H"
+                        gsLabel.text = "S"
+                        bvLabel.text = "V"
+                    }
+                    else if(colorViewModel.TypeSelection == 1)
+                    {
+                        rhLabel.text = "R"
+                        gsLabel.text = "G"
+                        bvLabel.text = "B"
+                    }
                 }
             }
         }

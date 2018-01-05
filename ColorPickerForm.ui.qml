@@ -15,7 +15,9 @@ Page {
     property alias bvValueLabel: bvValueLabel
     property alias comboBox: comboBox
     property alias button: button
-
+    property alias rhLabel: rhLabel
+    property alias gsLabel: gsLabel
+    property alias bvLabel: bvLabel
 
     Column {
         id: sliders

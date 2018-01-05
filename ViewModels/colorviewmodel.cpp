@@ -8,6 +8,7 @@
 ColorViewModel::ColorViewModel(QObject *parent) : QObject(parent)
 {
     _colorModel = std::make_unique<HSVColorModel>(0, 100, 100);
+    _typeSelection = 0;
 }
 
 int ColorViewModel::GetRH()
@@ -65,11 +66,13 @@ void ColorViewModel::SetTypeSelection(int selection)
     {
     case 0:
         _colorModel = std::move(_colorModel->AsHSV());
-        emit TypeSelectionChanged(selection);
+        emit typeSelectionChanged(selection);
+        _typeSelection = 0;
         break;
     case 1:
         _colorModel = std::move(_colorModel->AsRGB());
-        emit TypeSelectionChanged(selection);
+        emit typeSelectionChanged(selection);
+        _typeSelection = 1;
         break;
     default:
         break;

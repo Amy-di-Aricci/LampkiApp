@@ -13,7 +13,6 @@ RestHelper::RestHelper(QObject *parent) : QObject(parent), apiUrl(QString("http:
 
 void RestHelper::SendColor(QJsonDocument jsonDoc)
 {
-    QNetworkAccessManager manager;
     QNetworkRequest request(QUrl(apiUrl+"/unicolor"));
     request.setHeader(QNetworkRequest::ContentTypeHeader, QString("application/json"));
     QNetworkReply* reply = manager.put(request, jsonDoc.toJson(QJsonDocument::Compact));

@@ -23,7 +23,7 @@ private:
     Q_PROPERTY(int RH READ GetRH WRITE SetRH NOTIFY RHChanged)
     Q_PROPERTY(int GS READ GetGS WRITE SetGS NOTIFY GSChanged)
     Q_PROPERTY(int BV READ GetBV WRITE SetBV NOTIFY BVChanged)
-    Q_PROPERTY(int TypeSelection READ GetTypeSelection WRITE SetTypeSelection NOTIFY TypeSelectionChanged)
+    Q_PROPERTY(int TypeSelection READ GetTypeSelection WRITE SetTypeSelection NOTIFY typeSelectionChanged)
     Q_PROPERTY(QString Hex READ GetHex WRITE SetHex NOTIFY HexChanged)
 
 public:
@@ -39,7 +39,7 @@ signals:
     void RHChanged(int arg);
     void GSChanged(int arg);
     void BVChanged(int arg);
-    void TypeSelectionChanged(int arg);
+    void typeSelectionChanged(int arg);
     void HexChanged(QString arg);
 
 public slots:
