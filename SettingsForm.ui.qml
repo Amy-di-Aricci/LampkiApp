@@ -7,52 +7,83 @@ Page {
     id: settingsPage
     width: 640
     height: 480
+    property alias button: button
+    clip: true
+    property alias portTextField1: portTextField
+    property alias ipTextField: ipTextField
 
-    RowLayout {
-        id: rowLayout
-        x: 113
-        y: 45
-        width: 415
-        height: 150
-        spacing: 15
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.horizontalCenter: parent.horizontalCenter
+    ColumnLayout {
+        id: columnLayout
+        x: 165
+        y: 128
+        width: 311
+        height: 225
+        transformOrigin: Item.Top
+        spacing: 25
+        clip: false
 
-        ColumnLayout {
-            id: labelsColumn
-            width: 200
-            height: 200
-            spacing: 25
+        RowLayout {
+            id: rowLayout
+            y: 0
+            width: 341
+            height: 150
+            Layout.alignment: Qt.AlignLeft | Qt.AlignTop
+            Layout.fillWidth: true
+            spacing: 15
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
 
-            Text {
-                id: iPLabel
-                text: qsTr("IP urządzenia:")
-                font.pixelSize: 28
+            ColumnLayout {
+                id: labelsColumn
+                width: 200
+                height: 200
+                spacing: 25
+
+                Text {
+                    id: iPLabel
+                    text: qsTr("IP urządzenia:")
+                    font.pixelSize: 28
+                }
+
+                Text {
+                    id: portLabel
+                    text: qsTr("Port:")
+                    textFormat: Text.PlainText
+                    font.pixelSize: 28
+                }
             }
 
-            Text {
-                id: portLabel
-                text: qsTr("Port:")
-                textFormat: Text.PlainText
-                font.pixelSize: 28
+            ColumnLayout {
+                id: inputColumn
+                width: 250
+                height: 200
+                spacing: 25
+
+                TextField {
+                    id: ipTextField
+                    text: qsTr("192.168.1.6")
+                    validator: RegExpValidator {
+                        regExp: /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/
+                    }
+                }
+
+                TextField {
+                    id: portTextField
+                    text: qsTr("5000")
+                    validator: IntValidator{
+                        bottom: 0
+                        top: 65535
+                    }
+                }
             }
         }
 
-        ColumnLayout {
-            id: inputColumn
-            width: 250
-            height: 200
-            spacing: 25
-
-            TextField {
-                id: ipTextField
-                text: qsTr("Text Field")
-            }
-
-            TextField {
-                id: portTextField1
-                text: qsTr("Text Field")
-            }
+        Button {
+            id: button
+            text: qsTr("Zapisz")
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
+            Layout.fillWidth: false
+            Layout.fillHeight: false
         }
     }
 }

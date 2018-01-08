@@ -15,6 +15,9 @@ int main(int argc, char *argv[])
     qmlRegisterType<ColorViewModel>("LampkiAppSwipe.ColorViewModel", 1, 0, "ColorViewModel");
     qmlRegisterType<GradientViewModel>("LampkiAppSwipe.GradientViewModel", 1, 0, "GradientViewModel");
     qmlRegisterType<settingsViewModel>("LampkiAppSwipe.SettingsViewModel", 1, 0, "SettingsViewModel");
+    QCoreApplication::setOrganizationName("EdytaBrudzisz");
+    QCoreApplication::setOrganizationDomain("ebrudzisz.local");
+    QCoreApplication::setApplicationName("LampkiApp");
     QQmlApplicationEngine engine;
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
     if (engine.rootObjects().isEmpty())

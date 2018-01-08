@@ -1,28 +1,58 @@
 #include "settingsviewmodel.h"
+#include <QDebug>
 
 settingsViewModel::settingsViewModel(QObject *parent) : QObject(parent), _restHelper(RestHelper::getRestHelper())
 {
-
+    if(_hardDriveSettings.value("ip", "null").toString() == "null")
+        _hardDriveSettings.setValue("ip", "192.168.1.6");
+    if(_hardDriveSettings.value("port", -1).toInt() == -1)
+        _hardDriveSettings.setValue("port", 5000);
+    _restHelper.setApiUrl(_hardDriveSettings.value("ip", "192.168.1.6").toString());
+    _restHelper.setPort(_hardDriveSettings.value("port", 5000).toInt());
 }
 
 QString settingsViewModel::getUrl()
 {
-    return _restHelper.getApiUrl();
+    //return _restHelper.getApiUrl();
+    return _ip;
 }
 
 unsigned short settingsViewModel::getPort()
 {
-    return _restHelper.getPort();
+    //return _restHelper.getPort();
+    return _port;
+}
+
+QString settingsViewModel::getUrlFromSettings()
+{
+    return _hardDriveSettings.value("ip", "192.168.1.6").toString();
+}
+
+unsigned short settingsViewModel::getPortFromSettings()
+{
+    return _hardDriveSettings.value("port", 5000).toInt();
+}
+
+void settingsViewModel::setSettings()
+{
+    _hardDriveSettings.setValue("ip", this->_ip);
+    _hardDriveSettings.setValue("port", this->_port);
+    _restHelper.setApiUrl(this->_ip);
+    _restHelper.setPort(this->_port);
 }
 
 void settingsViewModel::setUrl(QString urlStr)
 {
-    _restHelper.setApiUrl(urlStr);
+    //_restHelper.setApiUrl(urlStr);
+    _ip = urlStr;
     emit urlChanged(urlStr);
+    qDebug() << "zmienilem urla";
 }
 
 void settingsViewModel::setPort(unsigned short portNum)
 {
-    _restHelper.setPort(portNum);
+    //_restHelper.setPort(portNum);
+    _port = portNum;
     emit portChanged(portNum);
+    qDebug() << "zmienilem port";
 }

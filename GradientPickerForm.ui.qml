@@ -18,6 +18,7 @@ Page {
     property alias sendButton: sendButton
     property alias firstColorButton: firstColorButton
     property alias lastColorButton: lastColorButton
+    clip: true
     contentWidth: -2
 
     Row {
