@@ -64,6 +64,8 @@ int GradientViewModel::GetBV()
 
 void GradientViewModel::SendGradient()
 {
+    RestHelper& restHelper = RestHelper::getRestHelper();
+    JSONHelper& jsonColor = JSONHelper::getJsonHelper();
     restHelper.SendColor(jsonColor.MulticolorToJson(_gradientVector), QString("/multicolor"));
 }
 
@@ -77,6 +79,10 @@ void GradientViewModel::setSelectedDiode(int diode)
 {
     _selectedDiode = diode;
     emit selectedDiodeChanged(diode);
+    emit RHChanged(this->GetRH());
+    emit GSChanged(this->GetGS());
+    emit BVChanged(this->GetBV());
+
 }
 
 void GradientViewModel::SetRH(int color)

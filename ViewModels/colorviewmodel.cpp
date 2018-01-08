@@ -39,6 +39,8 @@ QString ColorViewModel::GetHex()
 
 void ColorViewModel::SendUnicolor()
 {
+    RestHelper& restHelper = RestHelper::getRestHelper();
+    JSONHelper& jsonColor = JSONHelper::getJsonHelper();
     //QJsonDocument jsonDoc = jsonColor.ParseToJson(*_colorModel);
     restHelper.SendColor(jsonColor.UnicolorToJson(*_colorModel), QString("/unicolor"));
 }

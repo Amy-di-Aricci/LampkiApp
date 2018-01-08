@@ -6,5 +6,7 @@
         <file>main.qml</file>
         <file>GradientPicker.qml</file>
         <file>GradientPickerForm.ui.qml</file>
+        <file>Settings.qml</file>
+        <file>SettingsForm.ui.qml</file>
     </qresource>
 </RCC>

@@ -25,6 +25,10 @@ ApplicationWindow {
         {
             source: "GradientPicker.qml"
         }
+        Loader
+        {
+            source: "Settings.qml"
+        }
     }
 
 }

@@ -12,6 +12,7 @@ class JSONHelper
 {
 public:
     JSONHelper();
+    static JSONHelper& getJsonHelper();
     QJsonDocument UnicolorToJson(AColorModel& color);
     QJsonDocument MulticolorToJson(QVector<QString> colorArray);
 };

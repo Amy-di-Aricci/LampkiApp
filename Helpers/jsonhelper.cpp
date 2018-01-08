@@ -7,6 +7,12 @@ JSONHelper::JSONHelper()
 
 }
 
+JSONHelper &JSONHelper::getJsonHelper()
+{
+    static JSONHelper jsonHelper;
+    return jsonHelper;
+}
+
 QJsonDocument JSONHelper::UnicolorToJson(AColorModel& color)
 {
     QJsonObject jsonObj;

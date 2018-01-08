@@ -16,113 +16,129 @@ Page {
     property alias gsSlider: gsSlider
     property alias bvSlider: bvSlider
     property alias sendButton: sendButton
+    property alias firstColorButton: firstColorButton
+    property alias lastColorButton: lastColorButton
     contentWidth: -2
 
-    Rectangle {
-        id: rectangle
-        x: 20
-        y: 22
-        width: 75
+    Row {
+        id: row
+        x: 155
+        y: 51
+        width: 331
         height: 75
-        color: "#ff0000"
+
+        Rectangle {
+            id: rectangle
+            width: 75
+            height: 75
+            color: "#ff0000"
+
+            Button {
+                id: firstColorButton
+                text: qsTr("")
+                opacity: 0
+                spacing: 8
+                focusPolicy: Qt.NoFocus
+                anchors.fill: parent
+            }
+        }
+
+        Rectangle {
+            id: rectangle1
+            width: 30
+            height: 75
+            color: "#ff0000"
+        }
+
+        Rectangle {
+            id: rectangle2
+            width: 30
+            height: 75
+            color: "#ff0000"
+        }
+
+        Rectangle {
+            id: rectangle3
+            width: 30
+            height: 75
+            color: "#ff0000"
+        }
+
+        Rectangle {
+            id: rectangle4
+            width: 30
+            height: 75
+            color: "#ff0000"
+        }
+
+        Rectangle {
+            id: rectangle5
+            width: 30
+            height: 75
+            color: "#ff0000"
+        }
+
+        Rectangle {
+            id: rectangle6
+            width: 30
+            height: 75
+            color: "#ff0000"
+        }
+
+        Rectangle {
+            id: rectangle7
+            width: 75
+            height: 75
+            color: "#ff0000"
+
+            Button {
+                id: lastColorButton
+                text: qsTr("Button")
+                opacity: 0
+                anchors.fill: parent
+            }
+        }
     }
 
-    Slider {
-        id: rhSlider
-        x: 173
-        y: 170
-        stepSize: 1
-        to: 360
-        value: 0
-    }
-
-    Slider {
-        id: gsSlider
-        x: 173
-        y: 236
+    Column {
+        id: column
+        x: 220
+        y: 176
         width: 200
-        height: 51
-        stepSize: 1
-        to: 100
-        value: 100
-    }
+        height: 240
+        spacing: 10
 
-    Slider {
-        id: bvSlider
-        x: 173
-        y: 315
-        stepSize: 1
-        to: 100
-        value: 100
-    }
+        Slider {
+            id: rhSlider
+            anchors.horizontalCenter: parent.horizontalCenter
+            stepSize: 1
+            to: 360
+            value: 0
+        }
 
-    Rectangle {
-        id: rectangle1
-        x: 123
-        y: 22
-        width: 30
-        height: 75
-        color: "#ff0000"
-    }
+        Slider {
+            id: gsSlider
+            width: 200
+            height: 51
+            anchors.horizontalCenter: parent.horizontalCenter
+            stepSize: 1
+            to: 100
+            value: 100
+        }
 
-    Rectangle {
-        id: rectangle2
-        x: 180
-        y: 22
-        width: 30
-        height: 75
-        color: "#ff0000"
-    }
+        Slider {
+            id: bvSlider
+            anchors.horizontalCenter: parent.horizontalCenter
+            stepSize: 1
+            to: 100
+            value: 100
+        }
 
-    Rectangle {
-        id: rectangle3
-        x: 240
-        y: 22
-        width: 30
-        height: 75
-        color: "#ff0000"
-    }
-
-    Rectangle {
-        id: rectangle4
-        x: 299
-        y: 22
-        width: 30
-        height: 75
-        color: "#ff0000"
-    }
-
-    Rectangle {
-        id: rectangle5
-        x: 360
-        y: 22
-        width: 30
-        height: 75
-        color: "#ff0000"
-    }
-
-    Rectangle {
-        id: rectangle6
-        x: 418
-        y: 22
-        width: 30
-        height: 75
-        color: "#ff0000"
-    }
-
-    Rectangle {
-        id: rectangle7
-        x: 476
-        y: 22
-        width: 75
-        height: 75
-        color: "#ff0000"
-    }
-
-    Button {
-        id: sendButton
-        x: 223
-        y: 396
-        text: qsTr("Wyslij!")
+        Button {
+            id: sendButton
+            text: qsTr("Wyslij!")
+            anchors.horizontalCenter: parent.horizontalCenter
+            focusPolicy: Qt.NoFocus
+        }
     }
 }

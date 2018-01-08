@@ -18,7 +18,8 @@ SOURCES += main.cpp \
     Models/rgbcolormodel.cpp \
     Helpers/jsonhelper.cpp \
     Helpers/resthelper.cpp \
-    ViewModels/gradientviewmodel.cpp
+    ViewModels/gradientviewmodel.cpp \
+    ViewModels/settingsviewmodel.cpp
 
 RESOURCES += qml.qrc
 
@@ -40,4 +41,5 @@ HEADERS += \
     ViewModels/colorviewmodel.h \
     Helpers/jsonhelper.h \
     Helpers/resthelper.h \
-    ViewModels/gradientviewmodel.h
+    ViewModels/gradientviewmodel.h \
+    ViewModels/settingsviewmodel.h

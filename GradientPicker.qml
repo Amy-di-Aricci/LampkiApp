@@ -7,8 +7,26 @@ GradientPickerForm {
         id: gradientViewModel
     }
     id: gradientPickerForm
+    lastColorButton.onClicked: {
+        console.log("Last button clicked");
+        gradientPickerForm.rectangle7.border.width = 2;
+        gradientPickerForm.rectangle.border.width = 0;
+        gradientViewModel.selectedDiode = 1;
+        gradientPickerForm.rhSlider.value = gradientViewModel.RH;
+        gradientPickerForm.gsSlider.value = gradientViewModel.GS;
+        gradientPickerForm.bvSlider.value = gradientViewModel.BV;
+    }
+    firstColorButton.onClicked: {
+        console.log("First button clicked");
+        gradientPickerForm.rectangle.border.width = 2;
+        gradientPickerForm.rectangle7.border.width = 0;
+        gradientViewModel.selectedDiode = 0;
+        gradientPickerForm.rhSlider.value = gradientViewModel.RH;
+        gradientPickerForm.gsSlider.value = gradientViewModel.GS;
+        gradientPickerForm.bvSlider.value = gradientViewModel.BV;
+    }
     sendButton.onClicked: {
-    gradientViewModel.SendGradient();
+        gradientViewModel.SendGradient();
     }
     Binding {target: gradientViewModel; property: "RH"; value: gradientPickerForm.rhSlider.value}
     Binding {target: gradientViewModel; property: "GS"; value: gradientPickerForm.gsSlider.value}

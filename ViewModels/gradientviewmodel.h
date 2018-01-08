@@ -18,8 +18,6 @@ class GradientViewModel : public QObject
     std::unique_ptr<AColorModel> _firstColor;
     std::unique_ptr<AColorModel> _secondColor;
     int _selectedDiode;
-    JSONHelper jsonColor;
-    RestHelper restHelper;
     QVector<QString> generateGradient();
     Q_PROPERTY(QVector<QString> gradientVector READ getGradientVector WRITE setGradientVector NOTIFY gradientVectorChanged)
     Q_PROPERTY(int selectedDiode READ getSelectedDiode WRITE setSelectedDiode NOTIFY selectedDiodeChanged)
