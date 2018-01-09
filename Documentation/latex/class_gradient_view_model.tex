@@ -1,0 +1,359 @@
+\hypertarget{class_gradient_view_model}{}\section{Dokumentacja klasy Gradient\+View\+Model}
+\label{class_gradient_view_model}\index{Gradient\+View\+Model@{Gradient\+View\+Model}}
+
+
+The \mbox{\hyperlink{class_gradient_view_model}{Gradient\+View\+Model}} class Klasa pozwala na obsługę tworzenia gradientu dwukolorowego.  
+
+
+
+
+{\ttfamily \#include $<$gradientviewmodel.\+h$>$}
+
+Diagram dziedziczenia dla Gradient\+View\+Model\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_gradient_view_model}
+\end{center}
+\end{figure}
+\subsection*{Sloty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_gradient_view_model_a44a264b3dfb259c75107dd80b1d7e389}{set\+Gradient\+Vector}} (Q\+Vector$<$ Q\+String $>$ vect)
+\begin{DoxyCompactList}\small\item\em set\+Gradient\+Vector Modyfikuje właściwość gradient\+Vector \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gradient_view_model_a17f428fa2bb8885ecf5e712e1d35c7a8}{set\+Selected\+Diode}} (int diode)
+\begin{DoxyCompactList}\small\item\em set\+Selected\+Diode Modyfikuje właściwość selected\+Diode \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gradient_view_model_ad90c266ab078a0701788f2a7a9c7f2be}{set\+Selected\+Type}} (int type)
+\begin{DoxyCompactList}\small\item\em set\+Selected\+Type Modyfikuje właściwość selected\+Type, wywołuje konwersję między przestrzeniami H\+SV i R\+GB \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gradient_view_model_a1a5a60c3fb1224b70203f811747043c1}{Set\+RH}} (int color)
+\begin{DoxyCompactList}\small\item\em Set\+RH Modyfikuje właściwość RH. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gradient_view_model_a2b2cd55164016c051b0784396b51c0eb}{Set\+GS}} (int color)
+\begin{DoxyCompactList}\small\item\em Set\+GS Modyfikuje właściwość GS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gradient_view_model_a20989bc2daaea85e5cc33513af1b2660}{Set\+BV}} (int color)
+\begin{DoxyCompactList}\small\item\em Set\+BV Modyfikuje właściwość BV. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Sygnały}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_gradient_view_model_a5f33840baf0a02fab681992c3a9fbb29}{gradient\+Vector\+Changed}} (Q\+Vector$<$ Q\+String $>$ arg)
+\begin{DoxyCompactList}\small\item\em gradient\+Vector\+Changed Informuje o zmianie elementów kolekcji \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gradient_view_model_ad26d1979a011e1810e3e2e6c648b3882}{selected\+Diode\+Changed}} (int arg)
+\begin{DoxyCompactList}\small\item\em selected\+Diode\+Changed Informuje o zmianie wybranego końca gradientu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gradient_view_model_a5dbe7b881e5b4ef1ddbed14f0015a355}{selected\+Type\+Changed}} (int arg)
+\begin{DoxyCompactList}\small\item\em selected\+Type\+Changed Informuje o zmianie wybranej przestrzeni barw \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gradient_view_model_a50c4f64eb680f0efdb80b1e6888fc51c}{R\+H\+Changed}} (int arg)
+\begin{DoxyCompactList}\small\item\em R\+H\+Changed Informuje o zmianie właściwości RH. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gradient_view_model_a09e3fbfaa0b3f501ae7637736b5dcdc5}{G\+S\+Changed}} (int arg)
+\begin{DoxyCompactList}\small\item\em G\+S\+Changed Informuje o zmianie właściwości GS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gradient_view_model_affb6254ecc82d22552db80ecb959a9a0}{B\+V\+Changed}} (int arg)
+\begin{DoxyCompactList}\small\item\em selected\+Type\+Changed Informuje o zmianie wybranej przestrzeni barw \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gradient_view_model_a4cb2509cf74f45c66ae720ac3a6429f1}\label{class_gradient_view_model_a4cb2509cf74f45c66ae720ac3a6429f1}} 
+{\bfseries Gradient\+View\+Model} (Q\+Object $\ast$parent=nullptr)
+\item 
+Q\+Vector$<$ Q\+String $>$ \mbox{\hyperlink{class_gradient_view_model_a267819ee342ee0d7b8d59a07eca2f44a}{get\+Gradient\+Vector}} ()
+\begin{DoxyCompactList}\small\item\em get\+Gradient\+Vector \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_gradient_view_model_afbe2bb56ec39369736a0e4969a94de5b}{get\+Selected\+Diode}} ()
+\begin{DoxyCompactList}\small\item\em get\+Selected\+Diode \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_gradient_view_model_a44e6045ecb0d0ee9a9ab775e97ddf33c}{get\+Selected\+Type}} ()
+\begin{DoxyCompactList}\small\item\em get\+Selected\+Type \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_gradient_view_model_af2ca9997921048e2ded10b40fd947ae5}{Get\+RH}} ()
+\begin{DoxyCompactList}\small\item\em Get\+RH. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_gradient_view_model_a2df0db48205c8f0f7c72743c1a5f960d}{Get\+GS}} ()
+\begin{DoxyCompactList}\small\item\em Get\+GS. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_gradient_view_model_ac3643df9744d6672719c7d15d9d8a544}{Get\+BV}} ()
+\begin{DoxyCompactList}\small\item\em Get\+BV. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gradient_view_model_a51315c70cc18585c645e05dcc73e6c57}\label{class_gradient_view_model_a51315c70cc18585c645e05dcc73e6c57}} 
+Q\+\_\+\+I\+N\+V\+O\+K\+A\+B\+LE void \mbox{\hyperlink{class_gradient_view_model_a51315c70cc18585c645e05dcc73e6c57}{Send\+Gradient}} ()
+\begin{DoxyCompactList}\small\item\em Metoda wysyła dane na temat wybranych kolorów do urządzenia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Właściwości}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gradient_view_model_a53c45ee55828896e8da5541aee55f010}\label{class_gradient_view_model_a53c45ee55828896e8da5541aee55f010}} 
+Q\+Vector$<$ Q\+String $>$ {\bfseries gradient\+Vector}
+\item 
+\mbox{\Hypertarget{class_gradient_view_model_a99b38588ddd7327b24edb9a1949af53e}\label{class_gradient_view_model_a99b38588ddd7327b24edb9a1949af53e}} 
+int {\bfseries selected\+Diode}
+\item 
+\mbox{\Hypertarget{class_gradient_view_model_a8f59afe82a71f2b62e35d3f7f28c7d7a}\label{class_gradient_view_model_a8f59afe82a71f2b62e35d3f7f28c7d7a}} 
+int {\bfseries selected\+Type}
+\item 
+\mbox{\Hypertarget{class_gradient_view_model_a1f5d000e7a1a24d86b59fbbc6e10892e}\label{class_gradient_view_model_a1f5d000e7a1a24d86b59fbbc6e10892e}} 
+int {\bfseries RH}
+\item 
+\mbox{\Hypertarget{class_gradient_view_model_acb5ce2894831c795264a7a3130b4dd52}\label{class_gradient_view_model_acb5ce2894831c795264a7a3130b4dd52}} 
+int {\bfseries GS}
+\item 
+\mbox{\Hypertarget{class_gradient_view_model_ac7d5d88278017448e6a259308e1652f5}\label{class_gradient_view_model_ac7d5d88278017448e6a259308e1652f5}} 
+int {\bfseries BV}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+The \mbox{\hyperlink{class_gradient_view_model}{Gradient\+View\+Model}} class Klasa pozwala na obsługę tworzenia gradientu dwukolorowego. 
+
+\subsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_gradient_view_model_affb6254ecc82d22552db80ecb959a9a0}\label{class_gradient_view_model_affb6254ecc82d22552db80ecb959a9a0}} 
+\index{Gradient\+View\+Model@{Gradient\+View\+Model}!B\+V\+Changed@{B\+V\+Changed}}
+\index{B\+V\+Changed@{B\+V\+Changed}!Gradient\+View\+Model@{Gradient\+View\+Model}}
+\subsubsection{\texorpdfstring{B\+V\+Changed}{BVChanged}}
+{\footnotesize\ttfamily void Gradient\+View\+Model\+::\+B\+V\+Changed (\begin{DoxyParamCaption}\item[{int}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+selected\+Type\+Changed Informuje o zmianie wybranej przestrzeni barw 
+
+
+\begin{DoxyParams}{Parametry}
+{\em arg} & numer indeksu odpowiadającego wybranej przestrzeni barw \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gradient_view_model_ac3643df9744d6672719c7d15d9d8a544}\label{class_gradient_view_model_ac3643df9744d6672719c7d15d9d8a544}} 
+\index{Gradient\+View\+Model@{Gradient\+View\+Model}!Get\+BV@{Get\+BV}}
+\index{Get\+BV@{Get\+BV}!Gradient\+View\+Model@{Gradient\+View\+Model}}
+\subsubsection{\texorpdfstring{Get\+B\+V()}{GetBV()}}
+{\footnotesize\ttfamily int Gradient\+View\+Model\+::\+Get\+BV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get\+BV. 
+
+\begin{DoxyReturn}{Zwraca}
+wartość składowej Blue lub Value wybranego końca gradientu 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gradient_view_model_a267819ee342ee0d7b8d59a07eca2f44a}\label{class_gradient_view_model_a267819ee342ee0d7b8d59a07eca2f44a}} 
+\index{Gradient\+View\+Model@{Gradient\+View\+Model}!get\+Gradient\+Vector@{get\+Gradient\+Vector}}
+\index{get\+Gradient\+Vector@{get\+Gradient\+Vector}!Gradient\+View\+Model@{Gradient\+View\+Model}}
+\subsubsection{\texorpdfstring{get\+Gradient\+Vector()}{getGradientVector()}}
+{\footnotesize\ttfamily Q\+Vector$<$ Q\+String $>$ Gradient\+View\+Model\+::get\+Gradient\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Gradient\+Vector 
+
+\begin{DoxyReturn}{Zwraca}
+kolekcja kodów szesnastkowych kolorów 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gradient_view_model_a2df0db48205c8f0f7c72743c1a5f960d}\label{class_gradient_view_model_a2df0db48205c8f0f7c72743c1a5f960d}} 
+\index{Gradient\+View\+Model@{Gradient\+View\+Model}!Get\+GS@{Get\+GS}}
+\index{Get\+GS@{Get\+GS}!Gradient\+View\+Model@{Gradient\+View\+Model}}
+\subsubsection{\texorpdfstring{Get\+G\+S()}{GetGS()}}
+{\footnotesize\ttfamily int Gradient\+View\+Model\+::\+Get\+GS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get\+GS. 
+
+\begin{DoxyReturn}{Zwraca}
+wartość składowej Green lub Saturation wybranego końca gradientu 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gradient_view_model_af2ca9997921048e2ded10b40fd947ae5}\label{class_gradient_view_model_af2ca9997921048e2ded10b40fd947ae5}} 
+\index{Gradient\+View\+Model@{Gradient\+View\+Model}!Get\+RH@{Get\+RH}}
+\index{Get\+RH@{Get\+RH}!Gradient\+View\+Model@{Gradient\+View\+Model}}
+\subsubsection{\texorpdfstring{Get\+R\+H()}{GetRH()}}
+{\footnotesize\ttfamily int Gradient\+View\+Model\+::\+Get\+RH (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get\+RH. 
+
+\begin{DoxyReturn}{Zwraca}
+wartość składowej Red lub Hue wybranego końca gradientu 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gradient_view_model_afbe2bb56ec39369736a0e4969a94de5b}\label{class_gradient_view_model_afbe2bb56ec39369736a0e4969a94de5b}} 
+\index{Gradient\+View\+Model@{Gradient\+View\+Model}!get\+Selected\+Diode@{get\+Selected\+Diode}}
+\index{get\+Selected\+Diode@{get\+Selected\+Diode}!Gradient\+View\+Model@{Gradient\+View\+Model}}
+\subsubsection{\texorpdfstring{get\+Selected\+Diode()}{getSelectedDiode()}}
+{\footnotesize\ttfamily int Gradient\+View\+Model\+::get\+Selected\+Diode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Selected\+Diode 
+
+\begin{DoxyReturn}{Zwraca}
+indeks wybranego końca gradientu 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gradient_view_model_a44e6045ecb0d0ee9a9ab775e97ddf33c}\label{class_gradient_view_model_a44e6045ecb0d0ee9a9ab775e97ddf33c}} 
+\index{Gradient\+View\+Model@{Gradient\+View\+Model}!get\+Selected\+Type@{get\+Selected\+Type}}
+\index{get\+Selected\+Type@{get\+Selected\+Type}!Gradient\+View\+Model@{Gradient\+View\+Model}}
+\subsubsection{\texorpdfstring{get\+Selected\+Type()}{getSelectedType()}}
+{\footnotesize\ttfamily int Gradient\+View\+Model\+::get\+Selected\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Selected\+Type 
+
+\begin{DoxyReturn}{Zwraca}
+indeks wybranej przestrzeni barw 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gradient_view_model_a5f33840baf0a02fab681992c3a9fbb29}\label{class_gradient_view_model_a5f33840baf0a02fab681992c3a9fbb29}} 
+\index{Gradient\+View\+Model@{Gradient\+View\+Model}!gradient\+Vector\+Changed@{gradient\+Vector\+Changed}}
+\index{gradient\+Vector\+Changed@{gradient\+Vector\+Changed}!Gradient\+View\+Model@{Gradient\+View\+Model}}
+\subsubsection{\texorpdfstring{gradient\+Vector\+Changed}{gradientVectorChanged}}
+{\footnotesize\ttfamily void Gradient\+View\+Model\+::gradient\+Vector\+Changed (\begin{DoxyParamCaption}\item[{Q\+Vector$<$ Q\+String $>$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+gradient\+Vector\+Changed Informuje o zmianie elementów kolekcji 
+
+
+\begin{DoxyParams}{Parametry}
+{\em arg} & kolekcja kodów szesnastkowych kolorów gradientu \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gradient_view_model_a09e3fbfaa0b3f501ae7637736b5dcdc5}\label{class_gradient_view_model_a09e3fbfaa0b3f501ae7637736b5dcdc5}} 
+\index{Gradient\+View\+Model@{Gradient\+View\+Model}!G\+S\+Changed@{G\+S\+Changed}}
+\index{G\+S\+Changed@{G\+S\+Changed}!Gradient\+View\+Model@{Gradient\+View\+Model}}
+\subsubsection{\texorpdfstring{G\+S\+Changed}{GSChanged}}
+{\footnotesize\ttfamily void Gradient\+View\+Model\+::\+G\+S\+Changed (\begin{DoxyParamCaption}\item[{int}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+G\+S\+Changed Informuje o zmianie właściwości GS. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em arg} & wartość liczbowa składowej Green lub Saturation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gradient_view_model_a50c4f64eb680f0efdb80b1e6888fc51c}\label{class_gradient_view_model_a50c4f64eb680f0efdb80b1e6888fc51c}} 
+\index{Gradient\+View\+Model@{Gradient\+View\+Model}!R\+H\+Changed@{R\+H\+Changed}}
+\index{R\+H\+Changed@{R\+H\+Changed}!Gradient\+View\+Model@{Gradient\+View\+Model}}
+\subsubsection{\texorpdfstring{R\+H\+Changed}{RHChanged}}
+{\footnotesize\ttfamily void Gradient\+View\+Model\+::\+R\+H\+Changed (\begin{DoxyParamCaption}\item[{int}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+R\+H\+Changed Informuje o zmianie właściwości RH. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em arg} & wartość liczbowa składowej Red lub Hue \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gradient_view_model_ad26d1979a011e1810e3e2e6c648b3882}\label{class_gradient_view_model_ad26d1979a011e1810e3e2e6c648b3882}} 
+\index{Gradient\+View\+Model@{Gradient\+View\+Model}!selected\+Diode\+Changed@{selected\+Diode\+Changed}}
+\index{selected\+Diode\+Changed@{selected\+Diode\+Changed}!Gradient\+View\+Model@{Gradient\+View\+Model}}
+\subsubsection{\texorpdfstring{selected\+Diode\+Changed}{selectedDiodeChanged}}
+{\footnotesize\ttfamily void Gradient\+View\+Model\+::selected\+Diode\+Changed (\begin{DoxyParamCaption}\item[{int}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+selected\+Diode\+Changed Informuje o zmianie wybranego końca gradientu 
+
+
+\begin{DoxyParams}{Parametry}
+{\em arg} & indeks wybranego końca gradientu \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gradient_view_model_a5dbe7b881e5b4ef1ddbed14f0015a355}\label{class_gradient_view_model_a5dbe7b881e5b4ef1ddbed14f0015a355}} 
+\index{Gradient\+View\+Model@{Gradient\+View\+Model}!selected\+Type\+Changed@{selected\+Type\+Changed}}
+\index{selected\+Type\+Changed@{selected\+Type\+Changed}!Gradient\+View\+Model@{Gradient\+View\+Model}}
+\subsubsection{\texorpdfstring{selected\+Type\+Changed}{selectedTypeChanged}}
+{\footnotesize\ttfamily void Gradient\+View\+Model\+::selected\+Type\+Changed (\begin{DoxyParamCaption}\item[{int}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+selected\+Type\+Changed Informuje o zmianie wybranej przestrzeni barw 
+
+
+\begin{DoxyParams}{Parametry}
+{\em arg} & numer indeksu odpowiadającego wybranej przestrzeni barw \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gradient_view_model_a20989bc2daaea85e5cc33513af1b2660}\label{class_gradient_view_model_a20989bc2daaea85e5cc33513af1b2660}} 
+\index{Gradient\+View\+Model@{Gradient\+View\+Model}!Set\+BV@{Set\+BV}}
+\index{Set\+BV@{Set\+BV}!Gradient\+View\+Model@{Gradient\+View\+Model}}
+\subsubsection{\texorpdfstring{Set\+BV}{SetBV}}
+{\footnotesize\ttfamily void Gradient\+View\+Model\+::\+Set\+BV (\begin{DoxyParamCaption}\item[{int}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Set\+BV Modyfikuje właściwość BV. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em bv} & wartość przypisywana właściwości BV \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gradient_view_model_a44a264b3dfb259c75107dd80b1d7e389}\label{class_gradient_view_model_a44a264b3dfb259c75107dd80b1d7e389}} 
+\index{Gradient\+View\+Model@{Gradient\+View\+Model}!set\+Gradient\+Vector@{set\+Gradient\+Vector}}
+\index{set\+Gradient\+Vector@{set\+Gradient\+Vector}!Gradient\+View\+Model@{Gradient\+View\+Model}}
+\subsubsection{\texorpdfstring{set\+Gradient\+Vector}{setGradientVector}}
+{\footnotesize\ttfamily void Gradient\+View\+Model\+::set\+Gradient\+Vector (\begin{DoxyParamCaption}\item[{Q\+Vector$<$ Q\+String $>$}]{vect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+set\+Gradient\+Vector Modyfikuje właściwość gradient\+Vector 
+
+
+\begin{DoxyParams}{Parametry}
+{\em vect} & kolekcja kodow szesnastkowych kolorów \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gradient_view_model_a2b2cd55164016c051b0784396b51c0eb}\label{class_gradient_view_model_a2b2cd55164016c051b0784396b51c0eb}} 
+\index{Gradient\+View\+Model@{Gradient\+View\+Model}!Set\+GS@{Set\+GS}}
+\index{Set\+GS@{Set\+GS}!Gradient\+View\+Model@{Gradient\+View\+Model}}
+\subsubsection{\texorpdfstring{Set\+GS}{SetGS}}
+{\footnotesize\ttfamily void Gradient\+View\+Model\+::\+Set\+GS (\begin{DoxyParamCaption}\item[{int}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Set\+GS Modyfikuje właściwość GS. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em gs} & wartość przypisywana właściwości GS \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gradient_view_model_a1a5a60c3fb1224b70203f811747043c1}\label{class_gradient_view_model_a1a5a60c3fb1224b70203f811747043c1}} 
+\index{Gradient\+View\+Model@{Gradient\+View\+Model}!Set\+RH@{Set\+RH}}
+\index{Set\+RH@{Set\+RH}!Gradient\+View\+Model@{Gradient\+View\+Model}}
+\subsubsection{\texorpdfstring{Set\+RH}{SetRH}}
+{\footnotesize\ttfamily void Gradient\+View\+Model\+::\+Set\+RH (\begin{DoxyParamCaption}\item[{int}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Set\+RH Modyfikuje właściwość RH. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em rh} & wartość przypisywana właściwości RH \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gradient_view_model_a17f428fa2bb8885ecf5e712e1d35c7a8}\label{class_gradient_view_model_a17f428fa2bb8885ecf5e712e1d35c7a8}} 
+\index{Gradient\+View\+Model@{Gradient\+View\+Model}!set\+Selected\+Diode@{set\+Selected\+Diode}}
+\index{set\+Selected\+Diode@{set\+Selected\+Diode}!Gradient\+View\+Model@{Gradient\+View\+Model}}
+\subsubsection{\texorpdfstring{set\+Selected\+Diode}{setSelectedDiode}}
+{\footnotesize\ttfamily void Gradient\+View\+Model\+::set\+Selected\+Diode (\begin{DoxyParamCaption}\item[{int}]{diode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+set\+Selected\+Diode Modyfikuje właściwość selected\+Diode 
+
+
+\begin{DoxyParams}{Parametry}
+{\em diode} & indeks wybieranego końca gradientu \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_gradient_view_model_ad90c266ab078a0701788f2a7a9c7f2be}\label{class_gradient_view_model_ad90c266ab078a0701788f2a7a9c7f2be}} 
+\index{Gradient\+View\+Model@{Gradient\+View\+Model}!set\+Selected\+Type@{set\+Selected\+Type}}
+\index{set\+Selected\+Type@{set\+Selected\+Type}!Gradient\+View\+Model@{Gradient\+View\+Model}}
+\subsubsection{\texorpdfstring{set\+Selected\+Type}{setSelectedType}}
+{\footnotesize\ttfamily void Gradient\+View\+Model\+::set\+Selected\+Type (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+set\+Selected\+Type Modyfikuje właściwość selected\+Type, wywołuje konwersję między przestrzeniami H\+SV i R\+GB 
+
+
+\begin{DoxyParams}{Parametry}
+{\em selection} & numer indeksu odpowiadającego wybranej przestrzeni barw \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/amy1/\+Source/\+Qt/\+Lampki\+App/\+View\+Models/gradientviewmodel.\+h\item 
+C\+:/\+Users/amy1/\+Source/\+Qt/\+Lampki\+App/\+View\+Models/gradientviewmodel.\+cpp\end{DoxyCompactItemize}

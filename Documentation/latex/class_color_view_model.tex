@@ -1,0 +1,307 @@
+\hypertarget{class_color_view_model}{}\section{Dokumentacja klasy Color\+View\+Model}
+\label{class_color_view_model}\index{Color\+View\+Model@{Color\+View\+Model}}
+
+
+The \mbox{\hyperlink{class_color_view_model}{Color\+View\+Model}} class Klasa służy do komunikacji między modelami \mbox{\hyperlink{class_h_s_v_color_model}{H\+S\+V\+Color\+Model}} oraz \mbox{\hyperlink{class_r_g_b_color_model}{R\+G\+B\+Color\+Model}} a interfejsem użytkownika.  
+
+
+
+
+{\ttfamily \#include $<$colorviewmodel.\+h$>$}
+
+Diagram dziedziczenia dla Color\+View\+Model\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_color_view_model}
+\end{center}
+\end{figure}
+\subsection*{Sloty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_color_view_model_a0e3aa4fdb5fd3f05d3bd5c82ee571c91}{Set\+RH}} (int rh)
+\begin{DoxyCompactList}\small\item\em Set\+RH Modyfikuje właściwość RH. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_color_view_model_a7ef1ac038793902b460f5b65a66ba063}{Set\+GS}} (int gs)
+\begin{DoxyCompactList}\small\item\em Set\+GS Modyfikuje właściwość GS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_color_view_model_a07fbf050b15842e8e68c32c44ef9c6dd}{Set\+BV}} (int bv)
+\begin{DoxyCompactList}\small\item\em Set\+BV Modyfikuje właściwość BV. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_color_view_model_a51b5ff8b09631334b01ad95e0559452f}{set\+Selected\+Type}} (int selection)
+\begin{DoxyCompactList}\small\item\em set\+Selected\+Type Modyfikuje właściwość Selected\+Type, wywołuje konwersję między przestrzeniami H\+SV i R\+GB \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_color_view_model_ae5d39c213d8ef75346766d006e55e142}{Set\+Hex}} (Q\+String hex)
+\begin{DoxyCompactList}\small\item\em Set\+Hex Modyfikuje właściwość Hex. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Sygnały}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_color_view_model_ae82220bcc3ce7136ae025d8ba84c1ef5}{R\+H\+Changed}} (int arg)
+\begin{DoxyCompactList}\small\item\em R\+H\+Changed Informuje o zmianie właściwości RH. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_color_view_model_ab36d827240046bae55a0a7e18b50fcc3}{G\+S\+Changed}} (int arg)
+\begin{DoxyCompactList}\small\item\em G\+S\+Changed Informuje o zmianie właściwości GS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_color_view_model_a242d8b688b15906ff79ab0a01f5877fc}{B\+V\+Changed}} (int arg)
+\begin{DoxyCompactList}\small\item\em B\+V\+Changed Informuje o zmianie właściwości BV. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_color_view_model_a40e736b58e641078c43dcf146a4b53bd}{selected\+Type\+Changed}} (int arg)
+\begin{DoxyCompactList}\small\item\em selected\+Type\+Changed Informuje o zmianie wybranej przestrzeni barw \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_color_view_model_aff6ce1151bebe9048a61b99742ad6492}{hex\+Changed}} (Q\+String arg)
+\begin{DoxyCompactList}\small\item\em hex\+Changed Informuje o zmianie kodu szesnastkowego koloru \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_color_view_model_ac76a50243490a747fecb1c89bc2dd1be}\label{class_color_view_model_ac76a50243490a747fecb1c89bc2dd1be}} 
+{\bfseries Color\+View\+Model} (Q\+Object $\ast$parent=nullptr)
+\item 
+int \mbox{\hyperlink{class_color_view_model_a39724a979609cf96d76a905f313b18c6}{Get\+RH}} ()
+\begin{DoxyCompactList}\small\item\em Get\+RH Zwraca wartość składowej Hue lub Red -\/ w zależności od kontekstu. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_color_view_model_a82022dc5932e3c485e7f387b47251587}{Get\+GS}} ()
+\begin{DoxyCompactList}\small\item\em Get\+GS Zwraca wartość składowej Saturation lub Green -\/ w zależności od kontekstu. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_color_view_model_ab2ee304b2a6b4ff3945fe926acd575b4}{Get\+BV}} ()
+\begin{DoxyCompactList}\small\item\em Get\+BV Zwraca wartość składowej Value lub Blue -\/ w zależności od kontekstu. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_color_view_model_a02a51cd04a027d369275cb29229c44c7}{get\+Selected\+Type}} ()
+\begin{DoxyCompactList}\small\item\em get\+Selected\+Type Zwraca informację o wybranej przestrzeni barw \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_color_view_model_a8288300fcaa560f71974038e0bc191ea}{Get\+Hex}} ()
+\begin{DoxyCompactList}\small\item\em Get\+Hex. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_color_view_model_a86906d53218bb80ef563040cb5e7ec30}\label{class_color_view_model_a86906d53218bb80ef563040cb5e7ec30}} 
+Q\+\_\+\+I\+N\+V\+O\+K\+A\+B\+LE void \mbox{\hyperlink{class_color_view_model_a86906d53218bb80ef563040cb5e7ec30}{Send\+Unicolor}} ()
+\begin{DoxyCompactList}\small\item\em Metoda wysyła dane na temat koloru do urządzenia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Właściwości}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_color_view_model_ae0f5138a9621f84b1ded3ecff66d7762}\label{class_color_view_model_ae0f5138a9621f84b1ded3ecff66d7762}} 
+int {\bfseries RH}
+\item 
+\mbox{\Hypertarget{class_color_view_model_a01554860f6ce1c2cc9be53085c6be31f}\label{class_color_view_model_a01554860f6ce1c2cc9be53085c6be31f}} 
+int {\bfseries GS}
+\item 
+\mbox{\Hypertarget{class_color_view_model_ab56668fbfd75bd38ba255b0d7bf209e3}\label{class_color_view_model_ab56668fbfd75bd38ba255b0d7bf209e3}} 
+int {\bfseries BV}
+\item 
+\mbox{\Hypertarget{class_color_view_model_ad9b6fd8d70e82197261dde9e25f53373}\label{class_color_view_model_ad9b6fd8d70e82197261dde9e25f53373}} 
+int {\bfseries Selected\+Type}
+\item 
+\mbox{\Hypertarget{class_color_view_model_a5f3c225efc04ea48dd0be3133da6c660}\label{class_color_view_model_a5f3c225efc04ea48dd0be3133da6c660}} 
+Q\+String {\bfseries Hex}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+The \mbox{\hyperlink{class_color_view_model}{Color\+View\+Model}} class Klasa służy do komunikacji między modelami \mbox{\hyperlink{class_h_s_v_color_model}{H\+S\+V\+Color\+Model}} oraz \mbox{\hyperlink{class_r_g_b_color_model}{R\+G\+B\+Color\+Model}} a interfejsem użytkownika. 
+
+\subsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_color_view_model_a242d8b688b15906ff79ab0a01f5877fc}\label{class_color_view_model_a242d8b688b15906ff79ab0a01f5877fc}} 
+\index{Color\+View\+Model@{Color\+View\+Model}!B\+V\+Changed@{B\+V\+Changed}}
+\index{B\+V\+Changed@{B\+V\+Changed}!Color\+View\+Model@{Color\+View\+Model}}
+\subsubsection{\texorpdfstring{B\+V\+Changed}{BVChanged}}
+{\footnotesize\ttfamily void Color\+View\+Model\+::\+B\+V\+Changed (\begin{DoxyParamCaption}\item[{int}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+B\+V\+Changed Informuje o zmianie właściwości BV. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em arg} & wartość liczbowa składowej Blue lub Value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_color_view_model_ab2ee304b2a6b4ff3945fe926acd575b4}\label{class_color_view_model_ab2ee304b2a6b4ff3945fe926acd575b4}} 
+\index{Color\+View\+Model@{Color\+View\+Model}!Get\+BV@{Get\+BV}}
+\index{Get\+BV@{Get\+BV}!Color\+View\+Model@{Color\+View\+Model}}
+\subsubsection{\texorpdfstring{Get\+B\+V()}{GetBV()}}
+{\footnotesize\ttfamily int Color\+View\+Model\+::\+Get\+BV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get\+BV Zwraca wartość składowej Value lub Blue -\/ w zależności od kontekstu. 
+
+\begin{DoxyReturn}{Zwraca}
+wartość liczbowa składowej Value lub Blue 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_color_view_model_a82022dc5932e3c485e7f387b47251587}\label{class_color_view_model_a82022dc5932e3c485e7f387b47251587}} 
+\index{Color\+View\+Model@{Color\+View\+Model}!Get\+GS@{Get\+GS}}
+\index{Get\+GS@{Get\+GS}!Color\+View\+Model@{Color\+View\+Model}}
+\subsubsection{\texorpdfstring{Get\+G\+S()}{GetGS()}}
+{\footnotesize\ttfamily int Color\+View\+Model\+::\+Get\+GS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get\+GS Zwraca wartość składowej Saturation lub Green -\/ w zależności od kontekstu. 
+
+\begin{DoxyReturn}{Zwraca}
+wartość liczbowa składowej Saturation lub Green 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_color_view_model_a8288300fcaa560f71974038e0bc191ea}\label{class_color_view_model_a8288300fcaa560f71974038e0bc191ea}} 
+\index{Color\+View\+Model@{Color\+View\+Model}!Get\+Hex@{Get\+Hex}}
+\index{Get\+Hex@{Get\+Hex}!Color\+View\+Model@{Color\+View\+Model}}
+\subsubsection{\texorpdfstring{Get\+Hex()}{GetHex()}}
+{\footnotesize\ttfamily Q\+String Color\+View\+Model\+::\+Get\+Hex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get\+Hex. 
+
+\begin{DoxyReturn}{Zwraca}
+kod szesnastkowy wybranego koloru 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_color_view_model_a39724a979609cf96d76a905f313b18c6}\label{class_color_view_model_a39724a979609cf96d76a905f313b18c6}} 
+\index{Color\+View\+Model@{Color\+View\+Model}!Get\+RH@{Get\+RH}}
+\index{Get\+RH@{Get\+RH}!Color\+View\+Model@{Color\+View\+Model}}
+\subsubsection{\texorpdfstring{Get\+R\+H()}{GetRH()}}
+{\footnotesize\ttfamily int Color\+View\+Model\+::\+Get\+RH (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get\+RH Zwraca wartość składowej Hue lub Red -\/ w zależności od kontekstu. 
+
+\begin{DoxyReturn}{Zwraca}
+wartość liczbowa składowej Hue lub Red 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_color_view_model_a02a51cd04a027d369275cb29229c44c7}\label{class_color_view_model_a02a51cd04a027d369275cb29229c44c7}} 
+\index{Color\+View\+Model@{Color\+View\+Model}!get\+Selected\+Type@{get\+Selected\+Type}}
+\index{get\+Selected\+Type@{get\+Selected\+Type}!Color\+View\+Model@{Color\+View\+Model}}
+\subsubsection{\texorpdfstring{get\+Selected\+Type()}{getSelectedType()}}
+{\footnotesize\ttfamily int Color\+View\+Model\+::get\+Selected\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Selected\+Type Zwraca informację o wybranej przestrzeni barw 
+
+\begin{DoxyReturn}{Zwraca}
+wartość liczbowa indeksu wybranego elementu w rozwijanej liście 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_color_view_model_ab36d827240046bae55a0a7e18b50fcc3}\label{class_color_view_model_ab36d827240046bae55a0a7e18b50fcc3}} 
+\index{Color\+View\+Model@{Color\+View\+Model}!G\+S\+Changed@{G\+S\+Changed}}
+\index{G\+S\+Changed@{G\+S\+Changed}!Color\+View\+Model@{Color\+View\+Model}}
+\subsubsection{\texorpdfstring{G\+S\+Changed}{GSChanged}}
+{\footnotesize\ttfamily void Color\+View\+Model\+::\+G\+S\+Changed (\begin{DoxyParamCaption}\item[{int}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+G\+S\+Changed Informuje o zmianie właściwości GS. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em arg} & wartość liczbowa składowej Green lub Saturation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_color_view_model_aff6ce1151bebe9048a61b99742ad6492}\label{class_color_view_model_aff6ce1151bebe9048a61b99742ad6492}} 
+\index{Color\+View\+Model@{Color\+View\+Model}!hex\+Changed@{hex\+Changed}}
+\index{hex\+Changed@{hex\+Changed}!Color\+View\+Model@{Color\+View\+Model}}
+\subsubsection{\texorpdfstring{hex\+Changed}{hexChanged}}
+{\footnotesize\ttfamily void Color\+View\+Model\+::hex\+Changed (\begin{DoxyParamCaption}\item[{Q\+String}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+hex\+Changed Informuje o zmianie kodu szesnastkowego koloru 
+
+
+\begin{DoxyParams}{Parametry}
+{\em arg} & łańcuch znaków z kodem szesnastkowym koloru \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_color_view_model_ae82220bcc3ce7136ae025d8ba84c1ef5}\label{class_color_view_model_ae82220bcc3ce7136ae025d8ba84c1ef5}} 
+\index{Color\+View\+Model@{Color\+View\+Model}!R\+H\+Changed@{R\+H\+Changed}}
+\index{R\+H\+Changed@{R\+H\+Changed}!Color\+View\+Model@{Color\+View\+Model}}
+\subsubsection{\texorpdfstring{R\+H\+Changed}{RHChanged}}
+{\footnotesize\ttfamily void Color\+View\+Model\+::\+R\+H\+Changed (\begin{DoxyParamCaption}\item[{int}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+R\+H\+Changed Informuje o zmianie właściwości RH. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em arg} & wartość liczbowa składowej Red lub Hue \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_color_view_model_a40e736b58e641078c43dcf146a4b53bd}\label{class_color_view_model_a40e736b58e641078c43dcf146a4b53bd}} 
+\index{Color\+View\+Model@{Color\+View\+Model}!selected\+Type\+Changed@{selected\+Type\+Changed}}
+\index{selected\+Type\+Changed@{selected\+Type\+Changed}!Color\+View\+Model@{Color\+View\+Model}}
+\subsubsection{\texorpdfstring{selected\+Type\+Changed}{selectedTypeChanged}}
+{\footnotesize\ttfamily void Color\+View\+Model\+::selected\+Type\+Changed (\begin{DoxyParamCaption}\item[{int}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+selected\+Type\+Changed Informuje o zmianie wybranej przestrzeni barw 
+
+
+\begin{DoxyParams}{Parametry}
+{\em arg} & numer indeksu odpowiadającego wybranej przestrzeni barw \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_color_view_model_a07fbf050b15842e8e68c32c44ef9c6dd}\label{class_color_view_model_a07fbf050b15842e8e68c32c44ef9c6dd}} 
+\index{Color\+View\+Model@{Color\+View\+Model}!Set\+BV@{Set\+BV}}
+\index{Set\+BV@{Set\+BV}!Color\+View\+Model@{Color\+View\+Model}}
+\subsubsection{\texorpdfstring{Set\+BV}{SetBV}}
+{\footnotesize\ttfamily void Color\+View\+Model\+::\+Set\+BV (\begin{DoxyParamCaption}\item[{int}]{bv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Set\+BV Modyfikuje właściwość BV. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em bv} & wartość przypisywana właściwości BV \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_color_view_model_a7ef1ac038793902b460f5b65a66ba063}\label{class_color_view_model_a7ef1ac038793902b460f5b65a66ba063}} 
+\index{Color\+View\+Model@{Color\+View\+Model}!Set\+GS@{Set\+GS}}
+\index{Set\+GS@{Set\+GS}!Color\+View\+Model@{Color\+View\+Model}}
+\subsubsection{\texorpdfstring{Set\+GS}{SetGS}}
+{\footnotesize\ttfamily void Color\+View\+Model\+::\+Set\+GS (\begin{DoxyParamCaption}\item[{int}]{gs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Set\+GS Modyfikuje właściwość GS. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em gs} & wartość przypisywana właściwości GS \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_color_view_model_ae5d39c213d8ef75346766d006e55e142}\label{class_color_view_model_ae5d39c213d8ef75346766d006e55e142}} 
+\index{Color\+View\+Model@{Color\+View\+Model}!Set\+Hex@{Set\+Hex}}
+\index{Set\+Hex@{Set\+Hex}!Color\+View\+Model@{Color\+View\+Model}}
+\subsubsection{\texorpdfstring{Set\+Hex}{SetHex}}
+{\footnotesize\ttfamily void Color\+View\+Model\+::\+Set\+Hex (\begin{DoxyParamCaption}\item[{Q\+String}]{hex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Set\+Hex Modyfikuje właściwość Hex. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em hex} & kod szesnastkowy koloru przypisywany właściwości Hex \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_color_view_model_a0e3aa4fdb5fd3f05d3bd5c82ee571c91}\label{class_color_view_model_a0e3aa4fdb5fd3f05d3bd5c82ee571c91}} 
+\index{Color\+View\+Model@{Color\+View\+Model}!Set\+RH@{Set\+RH}}
+\index{Set\+RH@{Set\+RH}!Color\+View\+Model@{Color\+View\+Model}}
+\subsubsection{\texorpdfstring{Set\+RH}{SetRH}}
+{\footnotesize\ttfamily void Color\+View\+Model\+::\+Set\+RH (\begin{DoxyParamCaption}\item[{int}]{rh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Set\+RH Modyfikuje właściwość RH. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em rh} & wartość przypisywana właściwości RH \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_color_view_model_a51b5ff8b09631334b01ad95e0559452f}\label{class_color_view_model_a51b5ff8b09631334b01ad95e0559452f}} 
+\index{Color\+View\+Model@{Color\+View\+Model}!set\+Selected\+Type@{set\+Selected\+Type}}
+\index{set\+Selected\+Type@{set\+Selected\+Type}!Color\+View\+Model@{Color\+View\+Model}}
+\subsubsection{\texorpdfstring{set\+Selected\+Type}{setSelectedType}}
+{\footnotesize\ttfamily void Color\+View\+Model\+::set\+Selected\+Type (\begin{DoxyParamCaption}\item[{int}]{selection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+set\+Selected\+Type Modyfikuje właściwość Selected\+Type, wywołuje konwersję między przestrzeniami H\+SV i R\+GB 
+
+
+\begin{DoxyParams}{Parametry}
+{\em selection} & numer indeksu odpowiadającego wybranej przestrzeni barw \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/amy1/\+Source/\+Qt/\+Lampki\+App/\+View\+Models/colorviewmodel.\+h\item 
+C\+:/\+Users/amy1/\+Source/\+Qt/\+Lampki\+App/\+View\+Models/colorviewmodel.\+cpp\end{DoxyCompactItemize}

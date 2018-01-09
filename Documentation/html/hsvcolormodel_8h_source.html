@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LampkiApp: Plik źródłowy C:/Users/amy1/Source/Qt/LampkiApp/Models/hsvcolormodel.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">LampkiApp
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_6bc29530c65c2f5bccd4859e5d78ef19.html">amy1</a></li><li class="navelem"><a class="el" href="dir_4d5b10ae1a478092b5a432b5fbd5abf2.html">Source</a></li><li class="navelem"><a class="el" href="dir_f36274c7c6c4e45d20d4e0419f17a443.html">Qt</a></li><li class="navelem"><a class="el" href="dir_f8a3dd5d2a62d89706b2ed92bbfd6d5f.html">LampkiApp</a></li><li class="navelem"><a class="el" href="dir_412d28ec67853a6de67f5b12c1049bb3.html">Models</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">hsvcolormodel.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef HSVCOLORMODEL_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define HSVCOLORMODEL_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Models/acolormodel.h&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">class </span><a class="code" href="class_r_g_b_color_model.html">RGBColorModel</a>;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_h_s_v_color_model.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_h_s_v_color_model.html">HSVColorModel</a> : <span class="keyword">public</span> <a class="code" href="class_a_color_model.html">AColorModel</a></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> hue;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">int</span> saturation;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> value;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::unique_ptr&lt;RGBColorModel&gt; ParseToRGB();</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_h_s_v_color_model.html">HSVColorModel</a>();</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="class_h_s_v_color_model.html">HSVColorModel</a>(<span class="keywordtype">int</span> h, <span class="keywordtype">int</span> s, <span class="keywordtype">int</span> v);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    std::unique_ptr&lt;AColorModel&gt; <a class="code" href="class_h_s_v_color_model.html#a576aa9888f81248c99e67da6bb0587d2">AsRGB</a>() <span class="keyword">override</span>;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    std::unique_ptr&lt;AColorModel&gt; <a class="code" href="class_h_s_v_color_model.html#a4f15c9e48f157f7bd83f5a0837f1ac87">AsHSV</a>() <span class="keyword">override</span>;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    QString <a class="code" href="class_h_s_v_color_model.html#ab67eb5960aa53f4b573c40fd0945a9b9">AsHex</a>();</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_h_s_v_color_model.html#aeb9fd06a7806c227ee6a8ad85ee9fbf8">GetRH</a>() <span class="keyword">override</span>;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_h_s_v_color_model.html#a458ef47bbc34635460fe2d51ddbb858b">GetGS</a>() <span class="keyword">override</span>;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_h_s_v_color_model.html#a9365e20ba9a7eeccecc17ef7494b721a">GetBV</a>() <span class="keyword">override</span>;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_h_s_v_color_model.html#ae451a6fb2bd74cea52f96810e0140d46">SetRH</a>(<span class="keywordtype">int</span> rh) <span class="keyword">override</span>;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_h_s_v_color_model.html#a3478cc455994e6b0737391e083f1666a">SetGS</a>(<span class="keywordtype">int</span> gs) <span class="keyword">override</span>;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_h_s_v_color_model.html#a4213b3b016d213e791b97438e62c9c1f">SetBV</a>(<span class="keywordtype">int</span> bv) <span class="keyword">override</span>;</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;};</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#endif // HSVCOLORMODEL_H</span></div><div class="ttc" id="class_h_s_v_color_model_html_aeb9fd06a7806c227ee6a8ad85ee9fbf8"><div class="ttname"><a href="class_h_s_v_color_model.html#aeb9fd06a7806c227ee6a8ad85ee9fbf8">HSVColorModel::GetRH</a></div><div class="ttdeci">int GetRH() override</div><div class="ttdoc">GetRH. </div><div class="ttdef"><b>Definition:</b> hsvcolormodel.cpp:115</div></div>
+<div class="ttc" id="class_h_s_v_color_model_html"><div class="ttname"><a href="class_h_s_v_color_model.html">HSVColorModel</a></div><div class="ttdoc">The HSVColorModel class Klasa dziedziczy po abstrakcyjnej klasie AColorModel. Odpowiada za przetwarza...</div><div class="ttdef"><b>Definition:</b> hsvcolormodel.h:14</div></div>
+<div class="ttc" id="class_a_color_model_html"><div class="ttname"><a href="class_a_color_model.html">AColorModel</a></div><div class="ttdoc">The AColorModel class Klasa abstrakcyjna stanowiąca interfejs dla klas modeli kolorów w przestrzeniac...</div><div class="ttdef"><b>Definition:</b> acolormodel.h:11</div></div>
+<div class="ttc" id="class_h_s_v_color_model_html_a576aa9888f81248c99e67da6bb0587d2"><div class="ttname"><a href="class_h_s_v_color_model.html#a576aa9888f81248c99e67da6bb0587d2">HSVColorModel::AsRGB</a></div><div class="ttdeci">std::unique_ptr&lt; AColorModel &gt; AsRGB() override</div><div class="ttdoc">AsRGB Metoda wywołuje metodę parsującą ParseToRGB() i zwraca wynik konwersji. </div><div class="ttdef"><b>Definition:</b> hsvcolormodel.cpp:79</div></div>
+<div class="ttc" id="class_h_s_v_color_model_html_ae451a6fb2bd74cea52f96810e0140d46"><div class="ttname"><a href="class_h_s_v_color_model.html#ae451a6fb2bd74cea52f96810e0140d46">HSVColorModel::SetRH</a></div><div class="ttdeci">void SetRH(int rh) override</div><div class="ttdoc">SetRH Modyfikuje wartość pola hue. </div><div class="ttdef"><b>Definition:</b> hsvcolormodel.cpp:100</div></div>
+<div class="ttc" id="class_h_s_v_color_model_html_ab67eb5960aa53f4b573c40fd0945a9b9"><div class="ttname"><a href="class_h_s_v_color_model.html#ab67eb5960aa53f4b573c40fd0945a9b9">HSVColorModel::AsHex</a></div><div class="ttdeci">QString AsHex()</div><div class="ttdoc">AsHex Metoda wykonuje konwersję do modelu RGB, następnie przy użyciu StringStream wartości składowe k...</div><div class="ttdef"><b>Definition:</b> hsvcolormodel.cpp:89</div></div>
+<div class="ttc" id="class_h_s_v_color_model_html_a4f15c9e48f157f7bd83f5a0837f1ac87"><div class="ttname"><a href="class_h_s_v_color_model.html#a4f15c9e48f157f7bd83f5a0837f1ac87">HSVColorModel::AsHSV</a></div><div class="ttdeci">std::unique_ptr&lt; AColorModel &gt; AsHSV() override</div><div class="ttdoc">AsHSV Metoda przekazuje obiekt klasy HSVColorModel. </div><div class="ttdef"><b>Definition:</b> hsvcolormodel.cpp:84</div></div>
+<div class="ttc" id="class_h_s_v_color_model_html_a458ef47bbc34635460fe2d51ddbb858b"><div class="ttname"><a href="class_h_s_v_color_model.html#a458ef47bbc34635460fe2d51ddbb858b">HSVColorModel::GetGS</a></div><div class="ttdeci">int GetGS() override</div><div class="ttdoc">GetGS. </div><div class="ttdef"><b>Definition:</b> hsvcolormodel.cpp:120</div></div>
+<div class="ttc" id="class_r_g_b_color_model_html"><div class="ttname"><a href="class_r_g_b_color_model.html">RGBColorModel</a></div><div class="ttdoc">The RGBColorModel class Klasa dziedziczy po abstrakcyjnej klasie AColorModel. Odpowiada za przetwarza...</div><div class="ttdef"><b>Definition:</b> rgbcolormodel.h:12</div></div>
+<div class="ttc" id="class_h_s_v_color_model_html_a9365e20ba9a7eeccecc17ef7494b721a"><div class="ttname"><a href="class_h_s_v_color_model.html#a9365e20ba9a7eeccecc17ef7494b721a">HSVColorModel::GetBV</a></div><div class="ttdeci">int GetBV() override</div><div class="ttdoc">GetBV. </div><div class="ttdef"><b>Definition:</b> hsvcolormodel.cpp:125</div></div>
+<div class="ttc" id="class_h_s_v_color_model_html_a3478cc455994e6b0737391e083f1666a"><div class="ttname"><a href="class_h_s_v_color_model.html#a3478cc455994e6b0737391e083f1666a">HSVColorModel::SetGS</a></div><div class="ttdeci">void SetGS(int gs) override</div><div class="ttdoc">SetGS Modyfikuje wartość pola saturation. </div><div class="ttdef"><b>Definition:</b> hsvcolormodel.cpp:105</div></div>
+<div class="ttc" id="class_h_s_v_color_model_html_a4213b3b016d213e791b97438e62c9c1f"><div class="ttname"><a href="class_h_s_v_color_model.html#a4213b3b016d213e791b97438e62c9c1f">HSVColorModel::SetBV</a></div><div class="ttdeci">void SetBV(int bv) override</div><div class="ttdoc">SetBV Modyfikuje wartość pola value. </div><div class="ttdef"><b>Definition:</b> hsvcolormodel.cpp:110</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

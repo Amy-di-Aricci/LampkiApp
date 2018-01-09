@@ -1,0 +1,142 @@
+\hypertarget{class_rest_helper}{}\section{Dokumentacja klasy Rest\+Helper}
+\label{class_rest_helper}\index{Rest\+Helper@{Rest\+Helper}}
+
+
+The \mbox{\hyperlink{class_rest_helper}{Rest\+Helper}} class Klasa obsługuje wymianę danych pomiędzy aplikacją a A\+PI urządzenia Raspberry\+Pi. Klasa zgodna z wzorcem Singleton.  
+
+
+
+
+{\ttfamily \#include $<$resthelper.\+h$>$}
+
+Diagram dziedziczenia dla Rest\+Helper\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_rest_helper}
+\end{center}
+\end{figure}
+\subsection*{Sloty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_rest_helper_ae4960f651712c6ed66b032b3515b9f7b}\label{class_rest_helper_ae4960f651712c6ed66b032b3515b9f7b}} 
+void \mbox{\hyperlink{class_rest_helper_ae4960f651712c6ed66b032b3515b9f7b}{fished}} ()
+\begin{DoxyCompactList}\small\item\em fished Obsługuje zdarzenie zakończenia wysyłania danych \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_rest_helper_a52a1010ef31bfab8cafe7742c6206f71}\label{class_rest_helper_a52a1010ef31bfab8cafe7742c6206f71}} 
+{\bfseries Rest\+Helper} (Q\+Object $\ast$parent=nullptr)
+\item 
+void \mbox{\hyperlink{class_rest_helper_ab27c5c6fdbe8f25c1b4a288a983f7995}{Send\+Color}} (Q\+Json\+Document json\+Doc, Q\+String api)
+\begin{DoxyCompactList}\small\item\em Send\+Color Wysyła dokument J\+S\+ON do urządzenia. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_rest_helper_ad6c71fc30c6377e10f465038b6b06c4c}{get\+Api\+Url}} ()
+\begin{DoxyCompactList}\small\item\em get\+Api\+Url Zwraca adres IP urządzenia Raspberry\+Pi \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rest_helper_ae0812d7e48940885625f939cf56b4072}{set\+Api\+Url}} (Q\+String url)
+\begin{DoxyCompactList}\small\item\em set\+Api\+Url Modyfikuje adres IP urządzenia \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{class_rest_helper_ac4de88ea9cfe823ca317c87e99729b8c}{get\+Port}} ()
+\begin{DoxyCompactList}\small\item\em get\+Port Zwraca port połączenia z urządzeniem \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rest_helper_ac7748378a6d1dcfddf7dc5b803f9d4b2}{set\+Port}} (unsigned short port\+Num)
+\begin{DoxyCompactList}\small\item\em set\+Port Modyfikuje wartość numeru portu połączenia \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_rest_helper}{Rest\+Helper}} \& \mbox{\hyperlink{class_rest_helper_aac5e384d8056c0d4a6398e83963fb2bf}{get\+Rest\+Helper}} ()
+\begin{DoxyCompactList}\small\item\em get\+Rest\+Helper Zwraca referencję do istniejącego obiektu klasy lub, jeśli nie został wcześniej utworzony, inicjalizuje obiekt klasy \mbox{\hyperlink{class_rest_helper}{Rest\+Helper}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+The \mbox{\hyperlink{class_rest_helper}{Rest\+Helper}} class Klasa obsługuje wymianę danych pomiędzy aplikacją a A\+PI urządzenia Raspberry\+Pi. Klasa zgodna z wzorcem Singleton. 
+
+\subsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_rest_helper_ad6c71fc30c6377e10f465038b6b06c4c}\label{class_rest_helper_ad6c71fc30c6377e10f465038b6b06c4c}} 
+\index{Rest\+Helper@{Rest\+Helper}!get\+Api\+Url@{get\+Api\+Url}}
+\index{get\+Api\+Url@{get\+Api\+Url}!Rest\+Helper@{Rest\+Helper}}
+\subsubsection{\texorpdfstring{get\+Api\+Url()}{getApiUrl()}}
+{\footnotesize\ttfamily Q\+String Rest\+Helper\+::get\+Api\+Url (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Api\+Url Zwraca adres IP urządzenia Raspberry\+Pi 
+
+\begin{DoxyReturn}{Zwraca}
+Q\+String z adresem IP urządzenia 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_rest_helper_ac4de88ea9cfe823ca317c87e99729b8c}\label{class_rest_helper_ac4de88ea9cfe823ca317c87e99729b8c}} 
+\index{Rest\+Helper@{Rest\+Helper}!get\+Port@{get\+Port}}
+\index{get\+Port@{get\+Port}!Rest\+Helper@{Rest\+Helper}}
+\subsubsection{\texorpdfstring{get\+Port()}{getPort()}}
+{\footnotesize\ttfamily unsigned short Rest\+Helper\+::get\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Port Zwraca port połączenia z urządzeniem 
+
+\begin{DoxyReturn}{Zwraca}
+numer portu połączenia 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_rest_helper_aac5e384d8056c0d4a6398e83963fb2bf}\label{class_rest_helper_aac5e384d8056c0d4a6398e83963fb2bf}} 
+\index{Rest\+Helper@{Rest\+Helper}!get\+Rest\+Helper@{get\+Rest\+Helper}}
+\index{get\+Rest\+Helper@{get\+Rest\+Helper}!Rest\+Helper@{Rest\+Helper}}
+\subsubsection{\texorpdfstring{get\+Rest\+Helper()}{getRestHelper()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_rest_helper}{Rest\+Helper}} \& Rest\+Helper\+::get\+Rest\+Helper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+get\+Rest\+Helper Zwraca referencję do istniejącego obiektu klasy lub, jeśli nie został wcześniej utworzony, inicjalizuje obiekt klasy \mbox{\hyperlink{class_rest_helper}{Rest\+Helper}} 
+
+\begin{DoxyReturn}{Zwraca}
+referencja do obiektu klasy \mbox{\hyperlink{class_rest_helper}{Rest\+Helper}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_rest_helper_ab27c5c6fdbe8f25c1b4a288a983f7995}\label{class_rest_helper_ab27c5c6fdbe8f25c1b4a288a983f7995}} 
+\index{Rest\+Helper@{Rest\+Helper}!Send\+Color@{Send\+Color}}
+\index{Send\+Color@{Send\+Color}!Rest\+Helper@{Rest\+Helper}}
+\subsubsection{\texorpdfstring{Send\+Color()}{SendColor()}}
+{\footnotesize\ttfamily void Rest\+Helper\+::\+Send\+Color (\begin{DoxyParamCaption}\item[{Q\+Json\+Document}]{json\+Doc,  }\item[{Q\+String}]{api }\end{DoxyParamCaption})}
+
+
+
+Send\+Color Wysyła dokument J\+S\+ON do urządzenia. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em json\+Doc} & obiekt z danymi w notacji J\+S\+ON wysyłany do urządzenia \\
+\hline
+{\em api} & fragment adresu U\+RL do A\+PI urządzenia \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rest_helper_ae0812d7e48940885625f939cf56b4072}\label{class_rest_helper_ae0812d7e48940885625f939cf56b4072}} 
+\index{Rest\+Helper@{Rest\+Helper}!set\+Api\+Url@{set\+Api\+Url}}
+\index{set\+Api\+Url@{set\+Api\+Url}!Rest\+Helper@{Rest\+Helper}}
+\subsubsection{\texorpdfstring{set\+Api\+Url()}{setApiUrl()}}
+{\footnotesize\ttfamily void Rest\+Helper\+::set\+Api\+Url (\begin{DoxyParamCaption}\item[{Q\+String}]{url }\end{DoxyParamCaption})}
+
+
+
+set\+Api\+Url Modyfikuje adres IP urządzenia 
+
+
+\begin{DoxyParams}{Parametry}
+{\em url} & łańcuch znaków przypisywany polu api\+Url \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rest_helper_ac7748378a6d1dcfddf7dc5b803f9d4b2}\label{class_rest_helper_ac7748378a6d1dcfddf7dc5b803f9d4b2}} 
+\index{Rest\+Helper@{Rest\+Helper}!set\+Port@{set\+Port}}
+\index{set\+Port@{set\+Port}!Rest\+Helper@{Rest\+Helper}}
+\subsubsection{\texorpdfstring{set\+Port()}{setPort()}}
+{\footnotesize\ttfamily void Rest\+Helper\+::set\+Port (\begin{DoxyParamCaption}\item[{unsigned short}]{port\+Num }\end{DoxyParamCaption})}
+
+
+
+set\+Port Modyfikuje wartość numeru portu połączenia 
+
+
+\begin{DoxyParams}{Parametry}
+{\em port\+Num} & wartość przypisywana polu port \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/amy1/\+Source/\+Qt/\+Lampki\+App/\+Helpers/resthelper.\+h\item 
+C\+:/\+Users/amy1/\+Source/\+Qt/\+Lampki\+App/\+Helpers/resthelper.\+cpp\end{DoxyCompactItemize}

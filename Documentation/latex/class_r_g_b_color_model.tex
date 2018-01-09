@@ -1,0 +1,233 @@
+\hypertarget{class_r_g_b_color_model}{}\section{Dokumentacja klasy R\+G\+B\+Color\+Model}
+\label{class_r_g_b_color_model}\index{R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}}
+
+
+The \mbox{\hyperlink{class_r_g_b_color_model}{R\+G\+B\+Color\+Model}} class Klasa dziedziczy po abstrakcyjnej klasie \mbox{\hyperlink{class_a_color_model}{A\+Color\+Model}}. Odpowiada za przetwarzanie danych dotyczacych koloru w przestrzeni barw R\+GB.  
+
+
+
+
+{\ttfamily \#include $<$rgbcolormodel.\+h$>$}
+
+Diagram dziedziczenia dla R\+G\+B\+Color\+Model\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_r_g_b_color_model}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_r_g_b_color_model_a60985479217d6c0f8dda2ec5d728a035}{R\+G\+B\+Color\+Model}} (int r, int g, int b)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_r_g_b_color_model}{R\+G\+B\+Color\+Model}} Inicjalizuje obiekt klasy \mbox{\hyperlink{class_r_g_b_color_model}{R\+G\+B\+Color\+Model}}. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_a_color_model}{A\+Color\+Model}} $>$ \mbox{\hyperlink{class_r_g_b_color_model_a7619d529d6b0f94287221c813734244d}{As\+R\+GB}} () override
+\begin{DoxyCompactList}\small\item\em As\+R\+GB Metoda przekazuje obiekt klasy \mbox{\hyperlink{class_r_g_b_color_model}{R\+G\+B\+Color\+Model}}. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_a_color_model}{A\+Color\+Model}} $>$ \mbox{\hyperlink{class_r_g_b_color_model_a18d1b493d34f53ea4fdf9eaa066540c4}{As\+H\+SV}} () override
+\begin{DoxyCompactList}\small\item\em As\+H\+SV Metoda wywołuje metodę parsującą Parse\+To\+H\+S\+V() i zwraca wynik konwersji. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_r_g_b_color_model_ad1f82f637ab5b48c9e99b64270f38c54}{As\+Hex}} () override
+\begin{DoxyCompactList}\small\item\em As\+Hex Konwertuje wartości składowe z systemu dziesiątkowego do systemu szesnastkowego przy pomocy String\+Stream, po czym łączy je w kod szesnastkowy koloru. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_r_g_b_color_model_afd8f53b2cd42f3563db714978445a324}{Get\+RH}} () override
+\begin{DoxyCompactList}\small\item\em Get\+RH. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_r_g_b_color_model_ab90ddb80c57a81ca93b6c6b2aec21a88}{Get\+GS}} () override
+\begin{DoxyCompactList}\small\item\em Get\+GS. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_r_g_b_color_model_af87d29172cf3dc37e8b67926c323d521}{Get\+BV}} () override
+\begin{DoxyCompactList}\small\item\em Get\+BV. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_g_b_color_model_a2cfefda5444f0b9479aca4b661f1790b}{Set\+RH}} (int rh) override
+\begin{DoxyCompactList}\small\item\em Set\+RH Modyfikuje wartość pola red. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_g_b_color_model_a0b48f8097e7edf4a5e28e101a62c671a}{Set\+GS}} (int gs) override
+\begin{DoxyCompactList}\small\item\em Set\+GS Modyfikuje wartość pola green. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_g_b_color_model_ad3fa9841c0fa4082e06a81a3bbf57988}{Set\+BV}} (int bv) override
+\begin{DoxyCompactList}\small\item\em Set\+BV Modyfikuje wartość pola blue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+The \mbox{\hyperlink{class_r_g_b_color_model}{R\+G\+B\+Color\+Model}} class Klasa dziedziczy po abstrakcyjnej klasie \mbox{\hyperlink{class_a_color_model}{A\+Color\+Model}}. Odpowiada za przetwarzanie danych dotyczacych koloru w przestrzeni barw R\+GB. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_r_g_b_color_model_a60985479217d6c0f8dda2ec5d728a035}\label{class_r_g_b_color_model_a60985479217d6c0f8dda2ec5d728a035}} 
+\index{R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}!R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}}
+\index{R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}!R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}}
+\subsubsection{\texorpdfstring{R\+G\+B\+Color\+Model()}{RGBColorModel()}}
+{\footnotesize\ttfamily R\+G\+B\+Color\+Model\+::\+R\+G\+B\+Color\+Model (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{g,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_r_g_b_color_model}{R\+G\+B\+Color\+Model}} Inicjalizuje obiekt klasy \mbox{\hyperlink{class_r_g_b_color_model}{R\+G\+B\+Color\+Model}}. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em r} & Wartość do zainicjalizowania pola red \\
+\hline
+{\em g} & Wartość do zainicjalizowania pola green \\
+\hline
+{\em b} & Wartość do zainicjalizowania pola blue \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_r_g_b_color_model_ad1f82f637ab5b48c9e99b64270f38c54}\label{class_r_g_b_color_model_ad1f82f637ab5b48c9e99b64270f38c54}} 
+\index{R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}!As\+Hex@{As\+Hex}}
+\index{As\+Hex@{As\+Hex}!R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}}
+\subsubsection{\texorpdfstring{As\+Hex()}{AsHex()}}
+{\footnotesize\ttfamily Q\+String R\+G\+B\+Color\+Model\+::\+As\+Hex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+As\+Hex Konwertuje wartości składowe z systemu dziesiątkowego do systemu szesnastkowego przy pomocy String\+Stream, po czym łączy je w kod szesnastkowy koloru. 
+
+\begin{DoxyReturn}{Zwraca}
+Q\+String zawierający kod szesnastkowy koloru 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{class_a_color_model}{A\+Color\+Model}}.
+
+\mbox{\Hypertarget{class_r_g_b_color_model_a18d1b493d34f53ea4fdf9eaa066540c4}\label{class_r_g_b_color_model_a18d1b493d34f53ea4fdf9eaa066540c4}} 
+\index{R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}!As\+H\+SV@{As\+H\+SV}}
+\index{As\+H\+SV@{As\+H\+SV}!R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}}
+\subsubsection{\texorpdfstring{As\+H\+S\+V()}{AsHSV()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_a_color_model}{A\+Color\+Model}} $>$ R\+G\+B\+Color\+Model\+::\+As\+H\+SV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+As\+H\+SV Metoda wywołuje metodę parsującą Parse\+To\+H\+S\+V() i zwraca wynik konwersji. 
+
+\begin{DoxyReturn}{Zwraca}
+unique\+\_\+ptr do obiektu klasy \mbox{\hyperlink{class_h_s_v_color_model}{H\+S\+V\+Color\+Model}} 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{class_a_color_model}{A\+Color\+Model}}.
+
+\mbox{\Hypertarget{class_r_g_b_color_model_a7619d529d6b0f94287221c813734244d}\label{class_r_g_b_color_model_a7619d529d6b0f94287221c813734244d}} 
+\index{R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}!As\+R\+GB@{As\+R\+GB}}
+\index{As\+R\+GB@{As\+R\+GB}!R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}}
+\subsubsection{\texorpdfstring{As\+R\+G\+B()}{AsRGB()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_a_color_model}{A\+Color\+Model}} $>$ R\+G\+B\+Color\+Model\+::\+As\+R\+GB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+As\+R\+GB Metoda przekazuje obiekt klasy \mbox{\hyperlink{class_r_g_b_color_model}{R\+G\+B\+Color\+Model}}. 
+
+\begin{DoxyReturn}{Zwraca}
+unique\+\_\+ptr do obiektu klasy \mbox{\hyperlink{class_r_g_b_color_model}{R\+G\+B\+Color\+Model}} 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{class_a_color_model}{A\+Color\+Model}}.
+
+\mbox{\Hypertarget{class_r_g_b_color_model_af87d29172cf3dc37e8b67926c323d521}\label{class_r_g_b_color_model_af87d29172cf3dc37e8b67926c323d521}} 
+\index{R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}!Get\+BV@{Get\+BV}}
+\index{Get\+BV@{Get\+BV}!R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}}
+\subsubsection{\texorpdfstring{Get\+B\+V()}{GetBV()}}
+{\footnotesize\ttfamily int R\+G\+B\+Color\+Model\+::\+Get\+BV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get\+BV. 
+
+\begin{DoxyReturn}{Zwraca}
+wartość pola blue 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{class_a_color_model}{A\+Color\+Model}}.
+
+\mbox{\Hypertarget{class_r_g_b_color_model_ab90ddb80c57a81ca93b6c6b2aec21a88}\label{class_r_g_b_color_model_ab90ddb80c57a81ca93b6c6b2aec21a88}} 
+\index{R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}!Get\+GS@{Get\+GS}}
+\index{Get\+GS@{Get\+GS}!R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}}
+\subsubsection{\texorpdfstring{Get\+G\+S()}{GetGS()}}
+{\footnotesize\ttfamily int R\+G\+B\+Color\+Model\+::\+Get\+GS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get\+GS. 
+
+\begin{DoxyReturn}{Zwraca}
+wartość pola green 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{class_a_color_model}{A\+Color\+Model}}.
+
+\mbox{\Hypertarget{class_r_g_b_color_model_afd8f53b2cd42f3563db714978445a324}\label{class_r_g_b_color_model_afd8f53b2cd42f3563db714978445a324}} 
+\index{R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}!Get\+RH@{Get\+RH}}
+\index{Get\+RH@{Get\+RH}!R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}}
+\subsubsection{\texorpdfstring{Get\+R\+H()}{GetRH()}}
+{\footnotesize\ttfamily int R\+G\+B\+Color\+Model\+::\+Get\+RH (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get\+RH. 
+
+\begin{DoxyReturn}{Zwraca}
+wartość pola red 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{class_a_color_model}{A\+Color\+Model}}.
+
+\mbox{\Hypertarget{class_r_g_b_color_model_ad3fa9841c0fa4082e06a81a3bbf57988}\label{class_r_g_b_color_model_ad3fa9841c0fa4082e06a81a3bbf57988}} 
+\index{R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}!Set\+BV@{Set\+BV}}
+\index{Set\+BV@{Set\+BV}!R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}}
+\subsubsection{\texorpdfstring{Set\+B\+V()}{SetBV()}}
+{\footnotesize\ttfamily void R\+G\+B\+Color\+Model\+::\+Set\+BV (\begin{DoxyParamCaption}\item[{int}]{bv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set\+BV Modyfikuje wartość pola blue. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em bv} & Wartość przypisywana składowej blue \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{class_a_color_model}{A\+Color\+Model}}.
+
+\mbox{\Hypertarget{class_r_g_b_color_model_a0b48f8097e7edf4a5e28e101a62c671a}\label{class_r_g_b_color_model_a0b48f8097e7edf4a5e28e101a62c671a}} 
+\index{R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}!Set\+GS@{Set\+GS}}
+\index{Set\+GS@{Set\+GS}!R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}}
+\subsubsection{\texorpdfstring{Set\+G\+S()}{SetGS()}}
+{\footnotesize\ttfamily void R\+G\+B\+Color\+Model\+::\+Set\+GS (\begin{DoxyParamCaption}\item[{int}]{gs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set\+GS Modyfikuje wartość pola green. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em gs} & Wartość przypisywana składowej green \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{class_a_color_model}{A\+Color\+Model}}.
+
+\mbox{\Hypertarget{class_r_g_b_color_model_a2cfefda5444f0b9479aca4b661f1790b}\label{class_r_g_b_color_model_a2cfefda5444f0b9479aca4b661f1790b}} 
+\index{R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}!Set\+RH@{Set\+RH}}
+\index{Set\+RH@{Set\+RH}!R\+G\+B\+Color\+Model@{R\+G\+B\+Color\+Model}}
+\subsubsection{\texorpdfstring{Set\+R\+H()}{SetRH()}}
+{\footnotesize\ttfamily void R\+G\+B\+Color\+Model\+::\+Set\+RH (\begin{DoxyParamCaption}\item[{int}]{rh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set\+RH Modyfikuje wartość pola red. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em rh} & Wartość przypisywana składowej red \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{class_a_color_model}{A\+Color\+Model}}.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/amy1/\+Source/\+Qt/\+Lampki\+App/\+Models/rgbcolormodel.\+h\item 
+C\+:/\+Users/amy1/\+Source/\+Qt/\+Lampki\+App/\+Models/rgbcolormodel.\+cpp\end{DoxyCompactItemize}

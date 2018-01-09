@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LampkiApp: Plik źródłowy C:/Users/amy1/Source/Qt/LampkiApp/Helpers/jsonhelper.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">LampkiApp
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_6bc29530c65c2f5bccd4859e5d78ef19.html">amy1</a></li><li class="navelem"><a class="el" href="dir_4d5b10ae1a478092b5a432b5fbd5abf2.html">Source</a></li><li class="navelem"><a class="el" href="dir_f36274c7c6c4e45d20d4e0419f17a443.html">Qt</a></li><li class="navelem"><a class="el" href="dir_f8a3dd5d2a62d89706b2ed92bbfd6d5f.html">LampkiApp</a></li><li class="navelem"><a class="el" href="dir_e2d9eb8970c9107c3cb74f9771578473.html">Helpers</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">jsonhelper.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef JSONPARSER_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define JSONPARSER_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QJsonObject&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QJsonDocument&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QVector&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;Models/acolormodel.h&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_j_s_o_n_helper.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_j_s_o_n_helper.html">JSONHelper</a></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_j_s_o_n_helper.html">JSONHelper</a>();</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_j_s_o_n_helper.html">JSONHelper</a>&amp; <a class="code" href="class_j_s_o_n_helper.html#a16b59ed7de044a5f3e81cc2109d370a1">getJsonHelper</a>();</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    QJsonDocument <a class="code" href="class_j_s_o_n_helper.html#a4d4771c06547925f86cd02abba8af913">UnicolorToJson</a>(<a class="code" href="class_a_color_model.html">AColorModel</a>&amp; color);</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    QJsonDocument <a class="code" href="class_j_s_o_n_helper.html#ab31e0865df49879496cbc07232ceb8ce">MulticolorToJson</a>(QVector&lt;QString&gt; colorArray);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif // JSONPARSER_H</span></div><div class="ttc" id="class_j_s_o_n_helper_html_a16b59ed7de044a5f3e81cc2109d370a1"><div class="ttname"><a href="class_j_s_o_n_helper.html#a16b59ed7de044a5f3e81cc2109d370a1">JSONHelper::getJsonHelper</a></div><div class="ttdeci">static JSONHelper &amp; getJsonHelper()</div><div class="ttdoc">getJsonHelper Zwraca referencję do istniejącego obiektu klasy lub inicjalizuje obiekt klasy JSONHelpe...</div><div class="ttdef"><b>Definition:</b> jsonhelper.cpp:10</div></div>
+<div class="ttc" id="class_a_color_model_html"><div class="ttname"><a href="class_a_color_model.html">AColorModel</a></div><div class="ttdoc">The AColorModel class Klasa abstrakcyjna stanowiąca interfejs dla klas modeli kolorów w przestrzeniac...</div><div class="ttdef"><b>Definition:</b> acolormodel.h:11</div></div>
+<div class="ttc" id="class_j_s_o_n_helper_html"><div class="ttname"><a href="class_j_s_o_n_helper.html">JSONHelper</a></div><div class="ttdoc">The JSONHelper class Klasa przygotowuje dane do przesłania poprzez zapisanie danych na temat ustawion...</div><div class="ttdef"><b>Definition:</b> jsonhelper.h:15</div></div>
+<div class="ttc" id="class_j_s_o_n_helper_html_a4d4771c06547925f86cd02abba8af913"><div class="ttname"><a href="class_j_s_o_n_helper.html#a4d4771c06547925f86cd02abba8af913">JSONHelper::UnicolorToJson</a></div><div class="ttdeci">QJsonDocument UnicolorToJson(AColorModel &amp;color)</div><div class="ttdoc">UnicolorToJson Tworzy JSONa z kolorem wybranym w zakładce &quot;Jeden kolor&quot;. </div><div class="ttdef"><b>Definition:</b> jsonhelper.cpp:16</div></div>
+<div class="ttc" id="class_j_s_o_n_helper_html_ab31e0865df49879496cbc07232ceb8ce"><div class="ttname"><a href="class_j_s_o_n_helper.html#ab31e0865df49879496cbc07232ceb8ce">JSONHelper::MulticolorToJson</a></div><div class="ttdeci">QJsonDocument MulticolorToJson(QVector&lt; QString &gt; colorArray)</div><div class="ttdoc">MulticolorToJson Tworzy JSONa z wieloma kolorami - przypisanymi do każdej diody osobno. </div><div class="ttdef"><b>Definition:</b> jsonhelper.cpp:24</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

@@ -1,0 +1,84 @@
+\hypertarget{class_j_s_o_n_helper}{}\section{Dokumentacja klasy J\+S\+O\+N\+Helper}
+\label{class_j_s_o_n_helper}\index{J\+S\+O\+N\+Helper@{J\+S\+O\+N\+Helper}}
+
+
+The \mbox{\hyperlink{class_j_s_o_n_helper}{J\+S\+O\+N\+Helper}} class Klasa przygotowuje dane do przesłania poprzez zapisanie danych na temat ustawionych kolorów diod w Java\+Script Object Notation. Klasa jest zgodna z wzorcem Singleton.  
+
+
+
+
+{\ttfamily \#include $<$jsonhelper.\+h$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Json\+Document \mbox{\hyperlink{class_j_s_o_n_helper_a4d4771c06547925f86cd02abba8af913}{Unicolor\+To\+Json}} (\mbox{\hyperlink{class_a_color_model}{A\+Color\+Model}} \&color)
+\begin{DoxyCompactList}\small\item\em Unicolor\+To\+Json Tworzy J\+S\+O\+Na z kolorem wybranym w zakładce \char`\"{}\+Jeden kolor\char`\"{}. \end{DoxyCompactList}\item 
+Q\+Json\+Document \mbox{\hyperlink{class_j_s_o_n_helper_ab31e0865df49879496cbc07232ceb8ce}{Multicolor\+To\+Json}} (Q\+Vector$<$ Q\+String $>$ color\+Array)
+\begin{DoxyCompactList}\small\item\em Multicolor\+To\+Json Tworzy J\+S\+O\+Na z wieloma kolorami -\/ przypisanymi do każdej diody osobno. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_j_s_o_n_helper}{J\+S\+O\+N\+Helper}} \& \mbox{\hyperlink{class_j_s_o_n_helper_a16b59ed7de044a5f3e81cc2109d370a1}{get\+Json\+Helper}} ()
+\begin{DoxyCompactList}\small\item\em get\+Json\+Helper Zwraca referencję do istniejącego obiektu klasy lub inicjalizuje obiekt klasy \mbox{\hyperlink{class_j_s_o_n_helper}{J\+S\+O\+N\+Helper}}, jeśli nie został wcześniej utworzony \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+The \mbox{\hyperlink{class_j_s_o_n_helper}{J\+S\+O\+N\+Helper}} class Klasa przygotowuje dane do przesłania poprzez zapisanie danych na temat ustawionych kolorów diod w Java\+Script Object Notation. Klasa jest zgodna z wzorcem Singleton. 
+
+\subsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_j_s_o_n_helper_a16b59ed7de044a5f3e81cc2109d370a1}\label{class_j_s_o_n_helper_a16b59ed7de044a5f3e81cc2109d370a1}} 
+\index{J\+S\+O\+N\+Helper@{J\+S\+O\+N\+Helper}!get\+Json\+Helper@{get\+Json\+Helper}}
+\index{get\+Json\+Helper@{get\+Json\+Helper}!J\+S\+O\+N\+Helper@{J\+S\+O\+N\+Helper}}
+\subsubsection{\texorpdfstring{get\+Json\+Helper()}{getJsonHelper()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_j_s_o_n_helper}{J\+S\+O\+N\+Helper}} \& J\+S\+O\+N\+Helper\+::get\+Json\+Helper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+get\+Json\+Helper Zwraca referencję do istniejącego obiektu klasy lub inicjalizuje obiekt klasy \mbox{\hyperlink{class_j_s_o_n_helper}{J\+S\+O\+N\+Helper}}, jeśli nie został wcześniej utworzony 
+
+\begin{DoxyReturn}{Zwraca}
+referencja do obiektu klasy \mbox{\hyperlink{class_j_s_o_n_helper}{J\+S\+O\+N\+Helper}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_s_o_n_helper_ab31e0865df49879496cbc07232ceb8ce}\label{class_j_s_o_n_helper_ab31e0865df49879496cbc07232ceb8ce}} 
+\index{J\+S\+O\+N\+Helper@{J\+S\+O\+N\+Helper}!Multicolor\+To\+Json@{Multicolor\+To\+Json}}
+\index{Multicolor\+To\+Json@{Multicolor\+To\+Json}!J\+S\+O\+N\+Helper@{J\+S\+O\+N\+Helper}}
+\subsubsection{\texorpdfstring{Multicolor\+To\+Json()}{MulticolorToJson()}}
+{\footnotesize\ttfamily Q\+Json\+Document J\+S\+O\+N\+Helper\+::\+Multicolor\+To\+Json (\begin{DoxyParamCaption}\item[{Q\+Vector$<$ Q\+String $>$}]{color\+Array }\end{DoxyParamCaption})}
+
+
+
+Multicolor\+To\+Json Tworzy J\+S\+O\+Na z wieloma kolorami -\/ przypisanymi do każdej diody osobno. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em color\+Array} & kolekcja kodów szesnastkowych kolorów \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Q\+Json\+Document z zestawem kolorów 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_s_o_n_helper_a4d4771c06547925f86cd02abba8af913}\label{class_j_s_o_n_helper_a4d4771c06547925f86cd02abba8af913}} 
+\index{J\+S\+O\+N\+Helper@{J\+S\+O\+N\+Helper}!Unicolor\+To\+Json@{Unicolor\+To\+Json}}
+\index{Unicolor\+To\+Json@{Unicolor\+To\+Json}!J\+S\+O\+N\+Helper@{J\+S\+O\+N\+Helper}}
+\subsubsection{\texorpdfstring{Unicolor\+To\+Json()}{UnicolorToJson()}}
+{\footnotesize\ttfamily Q\+Json\+Document J\+S\+O\+N\+Helper\+::\+Unicolor\+To\+Json (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_color_model}{A\+Color\+Model}} \&}]{color }\end{DoxyParamCaption})}
+
+
+
+Unicolor\+To\+Json Tworzy J\+S\+O\+Na z kolorem wybranym w zakładce \char`\"{}\+Jeden kolor\char`\"{}. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em color} & referencja do modelu koloru w przestrzeni R\+GB lub H\+SV \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Q\+Json\+Document z informacją o pojedynczym kolorze 
+\end{DoxyReturn}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/amy1/\+Source/\+Qt/\+Lampki\+App/\+Helpers/jsonhelper.\+h\item 
+C\+:/\+Users/amy1/\+Source/\+Qt/\+Lampki\+App/\+Helpers/jsonhelper.\+cpp\end{DoxyCompactItemize}

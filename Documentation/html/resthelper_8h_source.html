@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LampkiApp: Plik źródłowy C:/Users/amy1/Source/Qt/LampkiApp/Helpers/resthelper.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">LampkiApp
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_6bc29530c65c2f5bccd4859e5d78ef19.html">amy1</a></li><li class="navelem"><a class="el" href="dir_4d5b10ae1a478092b5a432b5fbd5abf2.html">Source</a></li><li class="navelem"><a class="el" href="dir_f36274c7c6c4e45d20d4e0419f17a443.html">Qt</a></li><li class="navelem"><a class="el" href="dir_f8a3dd5d2a62d89706b2ed92bbfd6d5f.html">LampkiApp</a></li><li class="navelem"><a class="el" href="dir_e2d9eb8970c9107c3cb74f9771578473.html">Helpers</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">resthelper.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RESTHELPER_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define RESTHELPER_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QJsonDocument&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QNetworkAccessManager&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_rest_helper.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_rest_helper.html">RestHelper</a> : <span class="keyword">public</span> QObject</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    Q_OBJECT</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    QString apiUrl;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> port;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    QNetworkAccessManager manager;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_rest_helper.html">RestHelper</a>(QObject *parent = <span class="keyword">nullptr</span>);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_rest_helper.html">RestHelper</a>&amp; <a class="code" href="class_rest_helper.html#aac5e384d8056c0d4a6398e83963fb2bf">getRestHelper</a>();</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_rest_helper.html#ab27c5c6fdbe8f25c1b4a288a983f7995">SendColor</a>(QJsonDocument jsonDoc, QString api);</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    QString <a class="code" href="class_rest_helper.html#ad6c71fc30c6377e10f465038b6b06c4c">getApiUrl</a>();</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_rest_helper.html#ae0812d7e48940885625f939cf56b4072">setApiUrl</a>(QString url);</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="class_rest_helper.html#ac4de88ea9cfe823ca317c87e99729b8c">getPort</a>();</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_rest_helper.html#ac7748378a6d1dcfddf7dc5b803f9d4b2">setPort</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> portNum);</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;signals:</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">public</span> slots:</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_rest_helper.html#ae4960f651712c6ed66b032b3515b9f7b">fished</a>();</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif // RESTHELPER_H</span></div><div class="ttc" id="class_rest_helper_html"><div class="ttname"><a href="class_rest_helper.html">RestHelper</a></div><div class="ttdoc">The RestHelper class Klasa obsługuje wymianę danych pomiędzy aplikacją a API urządzenia RaspberryPi...</div><div class="ttdef"><b>Definition:</b> resthelper.h:12</div></div>
+<div class="ttc" id="class_rest_helper_html_ab27c5c6fdbe8f25c1b4a288a983f7995"><div class="ttname"><a href="class_rest_helper.html#ab27c5c6fdbe8f25c1b4a288a983f7995">RestHelper::SendColor</a></div><div class="ttdeci">void SendColor(QJsonDocument jsonDoc, QString api)</div><div class="ttdoc">SendColor Wysyła dokument JSON do urządzenia. </div><div class="ttdef"><b>Definition:</b> resthelper.cpp:20</div></div>
+<div class="ttc" id="class_rest_helper_html_ac4de88ea9cfe823ca317c87e99729b8c"><div class="ttname"><a href="class_rest_helper.html#ac4de88ea9cfe823ca317c87e99729b8c">RestHelper::getPort</a></div><div class="ttdeci">unsigned short getPort()</div><div class="ttdoc">getPort Zwraca port połączenia z urządzeniem </div><div class="ttdef"><b>Definition:</b> resthelper.cpp:38</div></div>
+<div class="ttc" id="class_rest_helper_html_ae0812d7e48940885625f939cf56b4072"><div class="ttname"><a href="class_rest_helper.html#ae0812d7e48940885625f939cf56b4072">RestHelper::setApiUrl</a></div><div class="ttdeci">void setApiUrl(QString url)</div><div class="ttdoc">setApiUrl Modyfikuje adres IP urządzenia </div><div class="ttdef"><b>Definition:</b> resthelper.cpp:33</div></div>
+<div class="ttc" id="class_rest_helper_html_ad6c71fc30c6377e10f465038b6b06c4c"><div class="ttname"><a href="class_rest_helper.html#ad6c71fc30c6377e10f465038b6b06c4c">RestHelper::getApiUrl</a></div><div class="ttdeci">QString getApiUrl()</div><div class="ttdoc">getApiUrl Zwraca adres IP urządzenia RaspberryPi </div><div class="ttdef"><b>Definition:</b> resthelper.cpp:28</div></div>
+<div class="ttc" id="class_rest_helper_html_ae4960f651712c6ed66b032b3515b9f7b"><div class="ttname"><a href="class_rest_helper.html#ae4960f651712c6ed66b032b3515b9f7b">RestHelper::fished</a></div><div class="ttdeci">void fished()</div><div class="ttdoc">fished Obsługuje zdarzenie zakończenia wysyłania danych </div><div class="ttdef"><b>Definition:</b> resthelper.cpp:48</div></div>
+<div class="ttc" id="class_rest_helper_html_aac5e384d8056c0d4a6398e83963fb2bf"><div class="ttname"><a href="class_rest_helper.html#aac5e384d8056c0d4a6398e83963fb2bf">RestHelper::getRestHelper</a></div><div class="ttdeci">static RestHelper &amp; getRestHelper()</div><div class="ttdoc">getRestHelper Zwraca referencję do istniejącego obiektu klasy lub, jeśli nie został wcześniej utworzo...</div><div class="ttdef"><b>Definition:</b> resthelper.cpp:14</div></div>
+<div class="ttc" id="class_rest_helper_html_ac7748378a6d1dcfddf7dc5b803f9d4b2"><div class="ttname"><a href="class_rest_helper.html#ac7748378a6d1dcfddf7dc5b803f9d4b2">RestHelper::setPort</a></div><div class="ttdeci">void setPort(unsigned short portNum)</div><div class="ttdoc">setPort Modyfikuje wartość numeru portu połączenia </div><div class="ttdef"><b>Definition:</b> resthelper.cpp:43</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LampkiApp: Dokumentacja klasy JSONHelper</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">LampkiApp
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pub-static-methods">Statyczne metody publiczne</a> &#124;
+<a href="class_j_s_o_n_helper-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy JSONHelper</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="class_j_s_o_n_helper.html" title="The JSONHelper class Klasa przygotowuje dane do przesłania poprzez zapisanie danych na temat ustawion...">JSONHelper</a> class Klasa przygotowuje dane do przesłania poprzez zapisanie danych na temat ustawionych kolorów diod w JavaScript Object Notation. Klasa jest zgodna z wzorcem Singleton.  
+ <a href="class_j_s_o_n_helper.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="jsonhelper_8h_source.html">jsonhelper.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a4d4771c06547925f86cd02abba8af913"><td class="memItemLeft" align="right" valign="top">QJsonDocument&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_s_o_n_helper.html#a4d4771c06547925f86cd02abba8af913">UnicolorToJson</a> (<a class="el" href="class_a_color_model.html">AColorModel</a> &amp;color)</td></tr>
+<tr class="memdesc:a4d4771c06547925f86cd02abba8af913"><td class="mdescLeft">&#160;</td><td class="mdescRight">UnicolorToJson Tworzy JSONa z kolorem wybranym w zakładce "Jeden kolor".  <a href="#a4d4771c06547925f86cd02abba8af913">Więcej...</a><br /></td></tr>
+<tr class="separator:a4d4771c06547925f86cd02abba8af913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab31e0865df49879496cbc07232ceb8ce"><td class="memItemLeft" align="right" valign="top">QJsonDocument&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_s_o_n_helper.html#ab31e0865df49879496cbc07232ceb8ce">MulticolorToJson</a> (QVector&lt; QString &gt; colorArray)</td></tr>
+<tr class="memdesc:ab31e0865df49879496cbc07232ceb8ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">MulticolorToJson Tworzy JSONa z wieloma kolorami - przypisanymi do każdej diody osobno.  <a href="#ab31e0865df49879496cbc07232ceb8ce">Więcej...</a><br /></td></tr>
+<tr class="separator:ab31e0865df49879496cbc07232ceb8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Statyczne metody publiczne</h2></td></tr>
+<tr class="memitem:a16b59ed7de044a5f3e81cc2109d370a1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_j_s_o_n_helper.html">JSONHelper</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_s_o_n_helper.html#a16b59ed7de044a5f3e81cc2109d370a1">getJsonHelper</a> ()</td></tr>
+<tr class="memdesc:a16b59ed7de044a5f3e81cc2109d370a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">getJsonHelper Zwraca referencję do istniejącego obiektu klasy lub inicjalizuje obiekt klasy <a class="el" href="class_j_s_o_n_helper.html" title="The JSONHelper class Klasa przygotowuje dane do przesłania poprzez zapisanie danych na temat ustawion...">JSONHelper</a>, jeśli nie został wcześniej utworzony  <a href="#a16b59ed7de044a5f3e81cc2109d370a1">Więcej...</a><br /></td></tr>
+<tr class="separator:a16b59ed7de044a5f3e81cc2109d370a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>The <a class="el" href="class_j_s_o_n_helper.html" title="The JSONHelper class Klasa przygotowuje dane do przesłania poprzez zapisanie danych na temat ustawion...">JSONHelper</a> class Klasa przygotowuje dane do przesłania poprzez zapisanie danych na temat ustawionych kolorów diod w JavaScript Object Notation. Klasa jest zgodna z wzorcem Singleton. </p>
+</div><h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a16b59ed7de044a5f3e81cc2109d370a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16b59ed7de044a5f3e81cc2109d370a1">&#9670;&nbsp;</a></span>getJsonHelper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_j_s_o_n_helper.html">JSONHelper</a> &amp; JSONHelper::getJsonHelper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>getJsonHelper Zwraca referencję do istniejącego obiektu klasy lub inicjalizuje obiekt klasy <a class="el" href="class_j_s_o_n_helper.html" title="The JSONHelper class Klasa przygotowuje dane do przesłania poprzez zapisanie danych na temat ustawion...">JSONHelper</a>, jeśli nie został wcześniej utworzony </p>
+<dl class="section return"><dt>Zwraca</dt><dd>referencja do obiektu klasy <a class="el" href="class_j_s_o_n_helper.html" title="The JSONHelper class Klasa przygotowuje dane do przesłania poprzez zapisanie danych na temat ustawion...">JSONHelper</a> </dd></dl>
+
+</div>
+</div>
+<a id="ab31e0865df49879496cbc07232ceb8ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab31e0865df49879496cbc07232ceb8ce">&#9670;&nbsp;</a></span>MulticolorToJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QJsonDocument JSONHelper::MulticolorToJson </td>
+          <td>(</td>
+          <td class="paramtype">QVector&lt; QString &gt;&#160;</td>
+          <td class="paramname"><em>colorArray</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>MulticolorToJson Tworzy JSONa z wieloma kolorami - przypisanymi do każdej diody osobno. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">colorArray</td><td>kolekcja kodów szesnastkowych kolorów </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>QJsonDocument z zestawem kolorów </dd></dl>
+
+</div>
+</div>
+<a id="a4d4771c06547925f86cd02abba8af913"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d4771c06547925f86cd02abba8af913">&#9670;&nbsp;</a></span>UnicolorToJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QJsonDocument JSONHelper::UnicolorToJson </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_a_color_model.html">AColorModel</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UnicolorToJson Tworzy JSONa z kolorem wybranym w zakładce "Jeden kolor". </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>referencja do modelu koloru w przestrzeni RGB lub HSV </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>QJsonDocument z informacją o pojedynczym kolorze </dd></dl>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>C:/Users/amy1/Source/Qt/LampkiApp/Helpers/<a class="el" href="jsonhelper_8h_source.html">jsonhelper.h</a></li>
+<li>C:/Users/amy1/Source/Qt/LampkiApp/Helpers/jsonhelper.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>
