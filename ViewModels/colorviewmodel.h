@@ -17,11 +17,11 @@ class ColorViewModel : public QObject
 
 private:
     std::unique_ptr<AColorModel> _colorModel;
-    int _typeSelection;
+    int _selectedType;
     Q_PROPERTY(int RH READ GetRH WRITE SetRH NOTIFY RHChanged)
     Q_PROPERTY(int GS READ GetGS WRITE SetGS NOTIFY GSChanged)
     Q_PROPERTY(int BV READ GetBV WRITE SetBV NOTIFY BVChanged)
-    Q_PROPERTY(int TypeSelection READ GetTypeSelection WRITE SetTypeSelection NOTIFY typeSelectionChanged)
+    Q_PROPERTY(int SelectedType READ getSelectedType WRITE setSelectedType NOTIFY selectedTypeChanged)
     Q_PROPERTY(QString Hex READ GetHex WRITE SetHex NOTIFY hexChanged)
 
 public:
@@ -29,7 +29,7 @@ public:
     int GetRH();
     int GetGS();
     int GetBV();
-    int GetTypeSelection();
+    int getSelectedType();
     QString GetHex();
     Q_INVOKABLE void SendUnicolor();
 
@@ -37,14 +37,14 @@ signals:
     void RHChanged(int arg);
     void GSChanged(int arg);
     void BVChanged(int arg);
-    void typeSelectionChanged(int arg);
+    void selectedTypeChanged(int arg);
     void hexChanged(QString arg);
 
 public slots:
     void SetRH(int rh);
     void SetGS(int gs);
     void SetBV(int bv);
-    void SetTypeSelection(int selection);
+    void setSelectedType(int selection);
     void SetHex(QString hex);
 };
 

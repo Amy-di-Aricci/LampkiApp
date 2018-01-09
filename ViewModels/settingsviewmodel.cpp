@@ -1,5 +1,4 @@
 #include "settingsviewmodel.h"
-#include <QDebug>
 
 settingsViewModel::settingsViewModel(QObject *parent) : QObject(parent), _restHelper(RestHelper::getRestHelper())
 {
@@ -13,13 +12,11 @@ settingsViewModel::settingsViewModel(QObject *parent) : QObject(parent), _restHe
 
 QString settingsViewModel::getUrl()
 {
-    //return _restHelper.getApiUrl();
     return _ip;
 }
 
 unsigned short settingsViewModel::getPort()
 {
-    //return _restHelper.getPort();
     return _port;
 }
 
@@ -43,16 +40,12 @@ void settingsViewModel::setSettings()
 
 void settingsViewModel::setUrl(QString urlStr)
 {
-    //_restHelper.setApiUrl(urlStr);
     _ip = urlStr;
     emit urlChanged(urlStr);
-    qDebug() << "zmienilem urla";
 }
 
 void settingsViewModel::setPort(unsigned short portNum)
 {
-    //_restHelper.setPort(portNum);
     _port = portNum;
     emit portChanged(portNum);
-    qDebug() << "zmienilem port";
 }

@@ -5,8 +5,6 @@ import Qt.labs.settings 1.0
 SettingsForm {
     id: settingsForm
     button.onClicked: {
-        console.log("IP: ", settingsViewModel.Url);
-        console.log("PORT: ", settingsViewModel.Port);
         settingsViewModel.setSettings();
 
     }

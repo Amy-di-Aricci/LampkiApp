@@ -1,5 +1,5 @@
 #include "gradientviewmodel.h"
-#include <QDebug>
+#include <memory>
 QVector<QString> GradientViewModel::generateGradient()
 {
     int diodeCount = 8;
@@ -12,8 +12,18 @@ QVector<QString> GradientViewModel::generateGradient()
         tempColor.SetBV((diodeCount-i-1)/(double)(diodeCount-1)*(_firstColor->AsRGB()->GetBV()) + i/(double)(diodeCount-1)*(_secondColor->AsRGB()->GetBV()));
         gradient.push_back(tempColor.AsHex());
     }
-    qDebug() << "Odpalony generator";
     return gradient;
+}
+
+AColorModel &GradientViewModel::GetDiodeReferrence()
+{
+    switch(_selectedDiode)
+    {
+    case 0:
+        return *_firstColor;
+    case 1:
+        return *_secondColor;
+    }
 }
 
 GradientViewModel::GradientViewModel(QObject *parent) : QObject(parent)
@@ -35,6 +45,11 @@ QVector<QString> GradientViewModel::getGradientVector()
 int GradientViewModel::getSelectedDiode()
 {
     return _selectedDiode;
+}
+
+int GradientViewModel::getSelectedType()
+{
+    return _selectedType;
 }
 
 int GradientViewModel::GetRH()
@@ -83,6 +98,27 @@ void GradientViewModel::setSelectedDiode(int diode)
     emit GSChanged(this->GetGS());
     emit BVChanged(this->GetBV());
 
+}
+
+void GradientViewModel::setSelectedType(int type)
+{
+    switch(type)
+    {
+    case 0:
+        _firstColor = std::move(_firstColor->AsHSV());
+        _secondColor = std::move(_secondColor->AsHSV());
+        _selectedType = type;
+        emit selectedTypeChanged(type);
+        break;
+    case 1:
+        _firstColor = std::move(_firstColor->AsRGB());
+        _secondColor = std::move(_secondColor->AsRGB());
+        _selectedType = type;
+        emit selectedTypeChanged(type);
+        break;
+    default:
+        break;
+    }
 }
 
 void GradientViewModel::SetRH(int color)

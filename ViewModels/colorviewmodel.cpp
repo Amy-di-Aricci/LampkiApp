@@ -4,12 +4,11 @@
 #include "Models/acolormodel.h"
 #include <memory>
 #include <QJsonDocument>
-#include <QDebug>
 
 ColorViewModel::ColorViewModel(QObject *parent) : QObject(parent)
 {
     _colorModel = std::make_unique<HSVColorModel>(0, 100, 100);
-    _typeSelection = 0;
+    _selectedType = 0;
 }
 
 int ColorViewModel::GetRH()
@@ -27,9 +26,9 @@ int ColorViewModel::GetBV()
     return _colorModel->GetBV();
 }
 
-int ColorViewModel::GetTypeSelection()
+int ColorViewModel::getSelectedType()
 {
-    return this->_typeSelection;
+    return this->_selectedType;
 }
 
 QString ColorViewModel::GetHex()
@@ -41,7 +40,6 @@ void ColorViewModel::SendUnicolor()
 {
     RestHelper& restHelper = RestHelper::getRestHelper();
     JSONHelper& jsonColor = JSONHelper::getJsonHelper();
-    //QJsonDocument jsonDoc = jsonColor.ParseToJson(*_colorModel);
     restHelper.SendColor(jsonColor.UnicolorToJson(*_colorModel), QString("/unicolor"));
 }
 
@@ -66,26 +64,19 @@ void ColorViewModel::SetBV(int bv)
     emit hexChanged(_colorModel->AsHex());
 }
 
-void ColorViewModel::SetTypeSelection(int selection)
+void ColorViewModel::setSelectedType(int selection)
 {
-    qDebug() << "Selection: " << selection;
     switch(selection)
     {
     case 0:
         _colorModel = std::move(_colorModel->AsHSV());
-        emit typeSelectionChanged(selection);
-        emit RHChanged(_colorModel->GetRH());
-        emit GSChanged(_colorModel->GetGS());
-        emit BVChanged(_colorModel->GetBV());
-        _typeSelection = selection;
+        emit selectedTypeChanged(selection);
+        _selectedType = selection;
         break;
     case 1:
         _colorModel = std::move(_colorModel->AsRGB());
-        emit typeSelectionChanged(selection);
-        emit RHChanged(_colorModel->GetRH());
-        emit GSChanged(_colorModel->GetGS());
-        emit BVChanged(_colorModel->GetBV());
-        _typeSelection = selection;
+        emit selectedTypeChanged(selection);
+        _selectedType = selection;
         break;
     default:
         break;

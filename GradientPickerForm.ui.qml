@@ -18,13 +18,23 @@ Page {
     property alias sendButton: sendButton
     property alias firstColorButton: firstColorButton
     property alias lastColorButton: lastColorButton
+    property alias rhLabel: rhLabel
+    property alias gsLabel: gsLabel
+    property alias bvLabel: bvLabel
+    property alias rhValueLabel: rhValueLabel
+    property alias gsValueLabel: gsValueLabel
+    property alias bvValueLabel: bvValueLabel
+        property alias comboBox: comboBox
+    width: 480
+    height: 640
+    title: "Gradient"
     clip: true
     contentWidth: -2
 
     Row {
         id: row
-        x: 155
-        y: 51
+        x: 75
+        y: 76
         width: 331
         height: 75
 
@@ -37,10 +47,12 @@ Page {
             Button {
                 id: firstColorButton
                 text: qsTr("")
+                anchors.fill: parent
+                checked: true
+                focusPolicy: Qt.NoFocus
+                checkable: true
                 opacity: 0
                 spacing: 8
-                focusPolicy: Qt.NoFocus
-                anchors.fill: parent
             }
         }
 
@@ -95,6 +107,7 @@ Page {
             Button {
                 id: lastColorButton
                 text: qsTr("Button")
+                checkable: true
                 opacity: 0
                 anchors.fill: parent
             }
@@ -103,8 +116,8 @@ Page {
 
     Column {
         id: column
-        x: 220
-        y: 176
+        x: 140
+        y: 263
         width: 200
         height: 240
         spacing: 10
@@ -137,9 +150,90 @@ Page {
 
         Button {
             id: sendButton
-            text: qsTr("Wyslij!")
-            anchors.horizontalCenter: parent.horizontalCenter
+            text: qsTr("Wyslij")
             focusPolicy: Qt.NoFocus
+            spacing: 4
+            anchors.horizontalCenter: parent.horizontalCenter
+        }
+    }
+
+    ComboBox {
+        id: comboBox
+        x: 180
+        y: 191
+        model: ListModel {
+            id: cbItems
+            ListElement {
+                text: "HSV"
+            }
+            ListElement {
+                text: "RGB"
+            }
+        }
+    }
+
+    Column {
+        id: nameLabels
+        x: 49
+        y: 273
+        width: 85
+        height: 177
+        spacing: 40
+
+        Text {
+            id: rhLabel
+            text: qsTr("Barwa")
+            anchors.right: parent.right
+            anchors.rightMargin: 0
+            horizontalAlignment: Text.AlignRight
+            font.pixelSize: 18
+        }
+
+        Text {
+            id: gsLabel
+            text: qsTr("Nasycenie")
+            anchors.right: parent.right
+            anchors.rightMargin: 0
+            horizontalAlignment: Text.AlignRight
+            font.pixelSize: 18
+        }
+
+        Text {
+            id: bvLabel
+            text: qsTr("Jasnosc")
+            anchors.right: parent.right
+            anchors.rightMargin: 0
+            horizontalAlignment: Text.AlignRight
+            font.pixelSize: 18
+        }
+    }
+
+    Column {
+        id: valueLabels
+        x: 346
+        y: 273
+        width: 85
+        height: 177
+        spacing: 40
+        Text {
+            id: rhValueLabel
+            text: qsTr("hue")
+            font.pixelSize: 18
+            horizontalAlignment: Text.AlignLeft
+        }
+
+        Text {
+            id: gsValueLabel
+            text: qsTr("sat")
+            font.pixelSize: 18
+            horizontalAlignment: Text.AlignLeft
+        }
+
+        Text {
+            id: bvValueLabel
+            text: qsTr("val")
+            font.pixelSize: 18
+            horizontalAlignment: Text.AlignLeft
         }
     }
 }

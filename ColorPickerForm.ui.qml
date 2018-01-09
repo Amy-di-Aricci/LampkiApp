@@ -19,6 +19,8 @@ Page {
     property alias rhLabel: rhLabel
     property alias gsLabel: gsLabel
     property alias bvLabel: bvLabel
+    width: 480
+    height: 640
     padding: 20
     contentHeight: 3
     focusPolicy: Qt.NoFocus
@@ -27,169 +29,163 @@ Page {
     hoverEnabled: true
     clip: true
 
-    Flow {
-        id: flow1
-        layoutDirection: Qt.LeftToRight
-        flow: Flow.LeftToRight
-        spacing: 10
+    Column {
+        id: sliders
+        anchors.rightMargin: 0
+        anchors.bottomMargin: 34
+        anchors.leftMargin: 0
+        anchors.topMargin: 239
         anchors.fill: parent
+        Layout.fillWidth: true
 
-        Column {
-            id: boxhex
-            width: 250
-            height: 400
-            clip: true
-            anchors.verticalCenter: parent.verticalCenter
-            anchors.left: parent.left
-            anchors.leftMargin: 0
-
-            Rectangle {
-                id: rectangle
-                width: 200
-                height: 200
-                anchors.top: parent.top
-                anchors.topMargin: 50
-                anchors.horizontalCenter: parent.horizontalCenter
-            }
-
-            TextEdit {
-                id: hexCodeLabel
-                text: qsTr("hex")
-                readOnly: true
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.top: rectangle.bottom
-                anchors.topMargin: 50
-                horizontalAlignment: Text.AlignHCenter
-                font.pixelSize: 24
-            }
+        TextEdit {
+            id: bvValueLabel
+            text: qsTr("val")
+            anchors.right: parent.right
+            anchors.rightMargin: 77
+            horizontalAlignment: Text.AlignRight
+            anchors.verticalCenter: bvSlider.verticalCenter
+            font.pixelSize: 18
         }
 
-        Column {
-            id: sliders
-            width: 300
-            height: 400
-            clip: true
-            anchors.verticalCenter: parent.verticalCenter
-            anchors.right: parent.right
+        TextEdit {
+            id: gsValueLabel
+            text: qsTr("sat")
+            horizontalAlignment: Text.AlignRight
+            anchors.right: bvValueLabel.right
             anchors.rightMargin: 0
+            anchors.verticalCenter: gsSlider.verticalCenter
+            font.pixelSize: 18
+        }
 
-            TextEdit {
-                id: bvValueLabel
-                text: qsTr("val")
-                anchors.verticalCenter: bvSlider.verticalCenter
-                anchors.left: bvSlider.right
-                anchors.leftMargin: 10
-                font.pixelSize: 24
-            }
+        TextEdit {
+            id: rhValueLabel
+            text: qsTr("hue")
+            horizontalAlignment: Text.AlignRight
+            anchors.verticalCenter: rhSlider.verticalCenter
+            anchors.right: gsValueLabel.right
+            anchors.rightMargin: 0
+            renderType: Text.QtRendering
+            font.pixelSize: 18
+        }
 
-            TextEdit {
-                id: gsValueLabel
-                text: qsTr("sat")
-                anchors.right: bvValueLabel.right
-                anchors.rightMargin: 0
-                anchors.verticalCenter: gsSlider.verticalCenter
-                font.pixelSize: 24
-            }
+        Text {
+            id: bvLabel
+            height: 27
+            text: qsTr("Jasnosc")
+            horizontalAlignment: Text.AlignRight
+            anchors.right: bvSlider.left
+            anchors.rightMargin: 10
+            anchors.verticalCenter: bvValueLabel.verticalCenter
+            font.pixelSize: 18
+            fontSizeMode: Text.VerticalFit
+        }
 
-            TextEdit {
-                id: rhValueLabel
-                text: qsTr("hue")
-                anchors.verticalCenter: rhSlider.verticalCenter
-                anchors.right: gsValueLabel.right
-                anchors.rightMargin: 0
-                renderType: Text.QtRendering
-                font.pixelSize: 24
-            }
+        Text {
+            id: gsLabel
+            height: 27
+            text: qsTr("Nasycenie")
+            horizontalAlignment: Text.AlignRight
+            anchors.right: gsSlider.left
+            anchors.rightMargin: 10
+            anchors.verticalCenter: gsSlider.verticalCenter
+            font.pixelSize: 18
+            fontSizeMode: Text.VerticalFit
+        }
 
-            Text {
-                id: bvLabel
-                width: 22
-                height: 27
-                text: qsTr("V")
-                anchors.right: bvSlider.left
-                anchors.rightMargin: 10
-                anchors.verticalCenter: bvValueLabel.verticalCenter
-                font.pixelSize: 24
-                fontSizeMode: Text.VerticalFit
-            }
+        Text {
+            id: rhLabel
+            height: 27
+            text: qsTr("Barwa")
+            horizontalAlignment: Text.AlignRight
+            anchors.right: gsLabel.right
+            anchors.rightMargin: 0
+            anchors.verticalCenter: rhSlider.verticalCenter
+            fontSizeMode: Text.VerticalFit
+            font.pixelSize: 18
+        }
 
-            Text {
-                id: gsLabel
-                width: 22
-                height: 27
-                text: qsTr("S")
-                anchors.right: bvLabel.right
-                anchors.rightMargin: 0
-                anchors.verticalCenter: gsSlider.verticalCenter
-                font.pixelSize: 24
-                fontSizeMode: Text.VerticalFit
-            }
+        Slider {
+            id: rhSlider
+            anchors.bottom: gsSlider.top
+            anchors.bottomMargin: 10
+            anchors.horizontalCenter: parent.horizontalCenter
+            focusPolicy: Qt.NoFocus
+            to: 360
+            stepSize: 0.8
+            value: 0
+        }
 
-            Text {
-                id: rhLabel
-                width: 22
-                height: 27
-                text: qsTr("H")
-                anchors.right: gsLabel.right
-                anchors.rightMargin: 0
-                anchors.verticalCenter: rhSlider.verticalCenter
-                fontSizeMode: Text.VerticalFit
-                font.pixelSize: 24
-            }
+        Slider {
+            id: bvSlider
+            anchors.top: gsSlider.bottom
+            anchors.topMargin: 10
+            anchors.horizontalCenter: parent.horizontalCenter
+            to: 100
+            stepSize: 1
+            value: 100
+        }
 
-            Slider {
-                id: rhSlider
-                anchors.top: gsSlider.top
-                anchors.topMargin: -75
-                anchors.horizontalCenter: parent.horizontalCenter
-                focusPolicy: Qt.NoFocus
-                to: 360
-                stepSize: 0.8
-                value: 0
-            }
+        Slider {
+            id: gsSlider
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
+            to: 100
+            stepSize: 1
+            value: 100
+        }
 
-            Slider {
-                id: bvSlider
-                anchors.bottom: gsSlider.bottom
-                anchors.bottomMargin: -75
-                anchors.horizontalCenter: parent.horizontalCenter
-                to: 100
-                stepSize: 1
-                value: 100
-            }
+        Button {
+            id: button
+            text: qsTr("Wyslij")
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 25
+        }
 
-            Slider {
-                id: gsSlider
-                anchors.verticalCenter: parent.verticalCenter
-                anchors.horizontalCenter: parent.horizontalCenter
-                to: 100
-                stepSize: 1
-                value: 100
-            }
-
-            Button {
-                id: button
-                text: qsTr("Wyslij")
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.bottom: parent.bottom
-                anchors.bottomMargin: 25
-            }
-
-            ComboBox {
-                id: comboBox
-                anchors.top: parent.top
-                anchors.topMargin: 20
-                anchors.horizontalCenter: parent.horizontalCenter
-                model: ListModel {
-                    id: cbItems
-                    ListElement {
-                        text: "HSV"
-                    }
-                    ListElement {
-                        text: "RGB"
-                    }
+        ComboBox {
+            id: comboBox
+            anchors.top: parent.top
+            anchors.topMargin: 20
+            anchors.horizontalCenter: parent.horizontalCenter
+            model: ListModel {
+                id: cbItems
+                ListElement {
+                    text: "HSV"
+                }
+                ListElement {
+                    text: "RGB"
                 }
             }
+        }
+    }
+
+    Column {
+        id: boxhex
+        x: 20
+        y: 20
+        anchors.bottomMargin: 360
+        anchors.fill: parent
+        Layout.fillWidth: true
+
+        Rectangle {
+            id: rectangle
+            width: 150
+            height: 150
+            anchors.top: parent.top
+            anchors.topMargin: 25
+            anchors.horizontalCenter: parent.horizontalCenter
+        }
+
+        TextEdit {
+            id: hexCodeLabel
+            text: qsTr("hex")
+            readOnly: true
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.top: rectangle.bottom
+            anchors.topMargin: 25
+            horizontalAlignment: Text.AlignHCenter
+            font.pixelSize: 24
         }
     }
 }
