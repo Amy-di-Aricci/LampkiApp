@@ -8,7 +8,7 @@
 
 HSVColorModel::HSVColorModel()
 {
-    hue = 60;
+    hue = 0;
     saturation = 100;
     value = 100;
 }

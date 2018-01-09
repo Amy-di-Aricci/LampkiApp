@@ -15,17 +15,6 @@ QVector<QString> GradientViewModel::generateGradient()
     return gradient;
 }
 
-AColorModel &GradientViewModel::GetDiodeReferrence()
-{
-    switch(_selectedDiode)
-    {
-    case 0:
-        return *_firstColor;
-    case 1:
-        return *_secondColor;
-    }
-}
-
 GradientViewModel::GradientViewModel(QObject *parent) : QObject(parent)
 {
     _selectedDiode = 0;

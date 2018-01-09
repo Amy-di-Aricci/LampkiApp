@@ -4,6 +4,10 @@
 #include <QString>
 #include <memory>
 
+/*!
+ * \brief The AColorModel class
+ * Klasa abstrakcyjna stanowiąca interfejs dla klas modeli kolorów w przestrzeniach RGB i HSV
+ */
 class AColorModel
 {
 public:

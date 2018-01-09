@@ -19,7 +19,7 @@ RestHelper &RestHelper::getRestHelper()
 
 void RestHelper::SendColor(QJsonDocument jsonDoc, QString api)
 {
-    QNetworkRequest request(QUrl("http://"+apiUrl+":"+port+"/lights"+api));
+    QNetworkRequest request(QUrl("http://"+apiUrl+":"+QString::number(port)+"/lights"+api));
     request.setHeader(QNetworkRequest::ContentTypeHeader, QString("application/json"));
     QNetworkReply* reply = manager.put(request, jsonDoc.toJson(QJsonDocument::Compact));
     connect(reply, SIGNAL(finished()), this, SLOT(fished()));
@@ -47,5 +47,5 @@ void RestHelper::setPort(unsigned short portNum)
 
 void RestHelper::fished()
 {
-    qDebug() << "Fished";
+
 }
